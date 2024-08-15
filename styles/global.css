@@ -1,0 +1,40 @@
+:root{
+    --black: #2D2D2E;
+    --brown: #432721;
+    --lime: #C4B400;
+    --green: #929302;
+    --ceramic: #7B311E;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+body{
+    display: inline-grid;
+}
+
+button{
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+.top_master_page{
+    background: var(--black);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.message_topbar{
+    background: var(--ceramic);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
