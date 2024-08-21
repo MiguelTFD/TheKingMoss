@@ -1,0 +1,174 @@
+<?php get_header(); ?>
+
+<div class="carousel" >
+
+    <div class="carrusel-list" id="carrusel-list">
+
+        <button class="carrusel-arrow carrusel-prev" id="button-prev" data-button="button-prev"
+                onclick="app.processingButton(event)">
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left"
+                 class="svg-inline--fa fa-chevron-left fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg"
+                 viewBox="0 0 320 512">
+                <path fill="currentColor"
+                      d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z">
+                </path>
+            </svg>
+        </button>
+
+        <div class="carrusel-track" id="track">
+            <div class="carrusel">
+                <div>
+
+                    <a href="#">
+                        <h4> Moss of the highest quality, harvested in the Peruvian Andes </h4>
+                        <picture>
+                            <img src="https://i.postimg.cc/NjQbVvhv/slider0.jpg" alt="imagen">
+                        </picture>
+                    </a>
+                </div>
+            </div>
+            <div class="carrusel">
+                <div>
+
+                    <a href="#">
+                        <h4>Quality and guaranteed drying process </h4>
+                        <picture>
+                            <img src="https://i.postimg.cc/0QKCm8SD/slider1.png" alt="imagen">
+                        </picture>
+                    </a>
+                </div>
+            </div>
+            <div class="carrusel">
+                <div>
+
+                    <a href="#">
+                        <h4> International shipments under the best packaging conditions </h4>
+                        <picture>
+                            <img src="https://i.postimg.cc/rwgg2Zc0/package.png" alt="imagen">
+                        </picture>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <button class="carrusel-arrow carrusel-next" id="button-next" data-button="button-next"
+                onclick="app.processingButton(event)">
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right"
+                 class="svg-inline--fa fa-chevron-right fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg"
+                 viewBox="0 0 320 512">
+                <path fill="currentColor"
+                      d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z">
+                </path>
+            </svg>
+        </button>
+
+
+    </div>
+
+</div>
+
+<div class="ads">
+    <div class="adsContent">
+        <p>
+
+        </p>
+    </div>
+</div>
+<p id="products"></p>
+<h1 style="text-align: center;margin: 5% 0" >Products</h1>
+<div class="mossCat">
+    <div class="catItem">
+        <h1>Dry Moss</h1>
+        <img src="https://i.postimg.cc/8kryfbd9/dryMoss.png">
+        <p><strong>Drying Moss</strong> Moss is natural moss that has been expertly dehydrated to ensure long lasting durability. It retains its beauty and texture over time.</p>
+    </div>
+    <div class="catItem">
+        <h1>Live Moss</h1>
+        <img src="https://i.postimg.cc/nc400cP1/liveMoss.png">
+        <p> Showcasing vibrant colours and exquisite textures, <strong>Live Moss</strong> offers a stunning range of colours and shapes to complement and enhance your collection.</p>
+    </div>
+
+</div>
+<div class="idk">
+
+    <h2 style="margin-top: 10%;font-size: 2.3em;" >The Process</h2>
+    <article>
+
+        <section class="iProceso" >
+            <div class="dars">
+                <img src="https://i.postimg.cc/RV5g7nXF/harvest.png">
+            </div >
+            <div class="ders">
+                <h2>Harvest</h2>
+                <p>To ensure minimal environmental impact and natural regrowth, we sustainably hand-pick the finest moss from the Peruvian Andes.</p>
+            </div>
+        </section>
+
+        <section  class="iProceso" style="flex-direction: row-reverse">
+            <img src="https://i.postimg.cc/0QKCm8SD/slider1.png">
+            <div>
+                <h2>Drying</h2>
+                <p>With no added chemicals, we carefully air dry the moss to maintain its natural color and softness.</p>
+            </div>
+        </section>
+
+        <section  class="iProceso">
+            <div class="dars">
+                <img src="https://i.postimg.cc/cCYXqs40/compressed.png">
+            </div>
+
+            <div class="ders">
+                <h2>Pressing</h2>
+                <p> We compact the moss through careful pressing, making it more compact and easier to handle while preserving its quality and natural look.</p>
+            </div>
+        </section>
+
+        <section  class="iProceso" style="flex-direction: row-reverse">
+            <img src="https://i.postimg.cc/rwgg2Zc0/package.png">
+            <div>
+                <h2>Packaging</h2>
+                <p>We carefully package the moss to ensure it arrives safely and in perfect condition, using materials that protect its quality during transportation.</p>
+            </div>
+        </section>
+
+    </article>
+
+
+
+    <div class="abtCt" id="about">
+        <h1 style="text-align: center;">About us</h1>
+        <div class="childAbtL">
+            <h2>History</h2>
+
+            <blockquote>
+                The King Moss, located in Satipo,
+                Junín, was founded in 2020 by Henry Cholan,
+                a visionary entrepreneur dedicated to showcase
+                the exceptional moss harvested from the Peruvian Andes.
+                Sourced from altitudes above 3900 MASL (Metres Above Sea Level),
+                our company specializes in the collection and sale
+                of high quality moss. Although we are known locally
+                for our outstanding moss, we are committed to expanding
+                our reach and sharing this natural
+                resource on an international level.
+            </blockquote>
+
+        </div>
+        <div class="childAbtR">
+            <h2>Why Choose Us? </h2>
+            <p>At The King Moss, our mission is to
+                deliver not only the highest quality
+                moss but also to ensure our practices
+                support the environment and local communities.
+                We are dedicated to sharing the unique beauty
+                of the Peruvian Andes with the world
+                while maintaining a commitment to
+                sustainability and excellence."</p>
+        </div>
+
+    </div>
+
+
+</div>
+
+<?php get_footer();?>

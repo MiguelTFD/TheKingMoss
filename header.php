@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Image Slider</title>
+    <!--<link rel="stylesheet" href="../styles/global.css">-->
+
+    <style>
+        :root{
+            --black: #2D2D2E;
+            --brown: #432721;
+            --lime: rgb(196, 180, 0);
+            --green: #929302;
+            --ceramic: #7B311E;
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: Roboto, "Helvetica Neue", sans-serif;
+
+        }
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+        body{
+            width: 100%;
+            display:inline-flex;
+            flex-direction: column;
+
+        }
+
+        button{
+            cursor: pointer;
+            outline: none;
+            border: none;
+        }
+        .top_master_page{
+            width: 97%;
+            margin: 1em auto;
+            background: var(--black);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem;
+            height: 3vh;
+            border-radius: 1.5rem;
+            align-items: center;
+            /* position: fixed;*/
+        }
+
+        .top_master_page > *{
+            margin: 0 10px;
+        }
+        .message_topbar{
+            background: var(--ceramic);
+            color: white;
+            height: 5vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+
+
+        }
+        .nav-items{
+            display: flex;
+            gap: 6rem;
+
+        }
+
+        .carousel{
+            width: 100%;
+
+        }
+        @media (min-width: 768px){
+            .carousel{
+                width: 100%;
+                margin: 0px auto;
+            }
+        }
+
+
+        .carrusel-list {
+
+
+
+            position: relative;
+
+            display: flex;
+
+            align-items: center;
+
+            width: fit-content;
+
+            border-radius: 15px;
+
+            margin: 0px auto;
+
+            max-width: 90vw;
+
+            overflow: hidden;
+
+        }
+
+
+
+        .carrusel-track {
+
+            position: relative;
+
+            top: 0;
+
+            left: 0;
+
+            display: flex;
+
+            justify-content: center;
+
+            transition: .5s ease-in-out;
+
+        }
+
+
+
+        .carrusel {
+
+            position: relative;
+            padding: 0 18px;
+            float: left;
+            box-sizing: border-box;
+            display: flex;
+            height: 80vh;
+            margin: 0 20px;
+            width: 80vw;
+
+
+
+        }
+
+
+
+        .carrusel h4 {
+
+            margin-left: 20px;
+            width: 60%;
+            position: absolute;
+
+            z-index: 1;
+
+            font-size: 3em;
+
+            line-height: 2em;
+
+            color: #ffffff;
+
+            padding: 15px;
+
+
+
+        }
+
+
+
+        .carrusel h4 small {
+
+            font-size: 15px;
+
+            display: block;
+
+        }
+
+
+
+        .carrusel a img {
+
+            object-fit: cover;
+
+            height: 80vh;
+
+            width: 80vw;
+
+            border-radius: 15px;
+
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+
+            transition: .3s ease-in-out;
+
+
+
+        }
+
+
+
+        @media(min-width:768px) {
+
+
+
+            .carrusel {
+
+                height: 80vh;
+
+                width: 80vw;
+
+            }
+
+            .carrusel a img {
+
+                height: 80vh;
+
+                width: 80vw;
+
+            }
+
+        }
+
+
+
+        .carrusel-arrow {
+
+
+
+            border-radius: 30px;
+
+            background-color: #ffffff;
+
+            position: absolute;
+
+            z-index: 4;
+
+            width: 48px;
+
+            height: 48px;
+
+            text-align: center;
+
+            border: 0;
+
+            cursor: pointer;
+
+
+
+        }
+
+
+
+        .carrusel-arrow:focus{
+
+            outline: 0;
+
+        }
+
+
+
+        .carrusel-arrow svg {
+
+            width: 12px;
+
+            height: 100%;
+
+            color: rgba(0, 0, 0, 0.7);
+
+
+
+        }
+
+
+
+        .carrusel-prev {
+
+            left: 0px;
+
+        }
+
+
+
+        .carrusel-next {
+
+            right: 0px;
+
+        }
+        .ads{
+            display: flex;
+            margin: 4rem auto;
+            width: 90%;
+            background: #e5e9f0;
+            border-radius: 15px;
+            height: 10vh;
+        }
+        .adsContent {
+            display: flex;
+            width: 100%;
+        }
+        .footerTp{
+            background: var(--black);
+            color: white;
+            display: flex;
+            height: 30vh;
+            width:100%;
+            margin-top: 10%;
+        }
+        .footerTp h2 {
+            text-align: center;
+            margin: 30px;
+        }
+
+        .footerLf{
+            width: 50%;
+        }
+        .footerRt{
+            width: 50%;
+        }
+        .mossCat{
+            display: flex;
+            width: 100%;
+            justify-content: space-evenly;
+
+        }
+        .catItem{
+            background:#d8dee9 ;
+            width: 25%;
+            border-radius: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra por defecto */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .catItem:hover {
+            transform: scale(1.05); /* Efecto de agrandar */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más intensa al hacer hover */
+        }
+        .catItem p {
+            padding: 10px;
+            font-size: 1.5em;
+        }
+        .catItem h1 {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .catItem img{
+            width: 100%;
+            background:  #e5e9f0;
+
+        }
+        .idk h1, h2, h3, h4, h5, h6 {
+            margin: 30px 0 30px 0;
+        }
+        .idk{
+            width: 90%;
+            margin: 0 auto;
+        }
+        .childAbtR {
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            align-items: end;
+            margin-bottom: 3em;
+        }
+        .childAbtL{
+            margin-bottom: 6em;
+        }
+
+
+        .childAbtR>h2{
+            width: 50%;
+        }
+        .childAbtR>p{
+            width: 50%;
+            font-size: 2em;
+            line-height: 1.7em;
+        }
+        .childAbtL>h2{
+            width: 50%;
+        }
+        .childAbtL>blockquote {
+            width: 50%;
+            font-size: 2em;
+            line-height: 1.7em;
+        }
+        .iProceso{
+            display: flex;
+            gap: 40px;
+            margin: 10% 0;
+            font-size: 2em;
+        }
+        .iProceso img{
+            width: 60%;
+            border-radius: 30px;
+        }
+        .iProceso p{
+            width: 60%;
+
+        }
+        .abtCt{
+            background: #e5e9f0;
+            border-radius: 30px;
+            padding: 5%;
+        }
+    </style>
+
+    <!--Icons-->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body id="home">
+<section class="message_topbar">
+    <p>Soon Importaciones Power Plant (RUC: 10724859441) will be Grupo Empresarial King Moss SAC.</p>
+</section>
+<header class="top_master_page">
+    <!--<span class="material-symbols-outlined">menu</span>-->
+    <p>THE KING MOSS</p>
+    <div class="nav-items">
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <!--<span class="material-symbols-outlined">account_circle</span>-->
+</header>
