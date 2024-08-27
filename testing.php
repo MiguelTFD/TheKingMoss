@@ -1,14 +1,20 @@
+<?php
+echo 'xd nomas';
+?>
+
 <!DOCTYPE html>
 <html lang="en" style="margin-top: 0px !important;">
 
 <head>
     <meta charset="utf-8">
-    <link rel="shortcut icon" type="x-icon" href="/img/icon/Logo.png" >
+    <link rel="icon" href="img/icon/TKMLogo.png" type="image/png">
     <title>The King Moss</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
 
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -78,13 +84,14 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto p-4 p-lg-0">
-            <a href="index.php" class="nav-item nav-link active">Home</a>
-            <a href="about.php" class="nav-item nav-link">About</a>
-            <a href="services.php" class="nav-item nav-link">Services</a>
-            <a href="products.php" class="nav-item nav-link">Products</a>
-            <a href="contact.php" class="nav-item nav-link">Contact</a>
+            <a href="#idk" class="nav-item nav-link active">Home</a>
+            <a href="#aboutTp" class="nav-item nav-link">About</a>
+            <a href="#servicesTp" class="nav-item nav-link">Services</a>
+            <a href="#productsTp" class="nav-item nav-link">Products</a>
+            <a href="#contactTp" class="nav-item nav-link">Contact</a>
         </div>
         <a href="#contactTp" class="btn btn-primary py-4 px-lg-4 rounded-0 d-none d-lg-block">Get A Quote<i class="fa fa-arrow-right ms-3"></i></a>
     </div>
 </nav>
 <!-- Navbar End -->
+</body>

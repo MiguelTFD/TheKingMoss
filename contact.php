@@ -1,7 +1,4 @@
-
-
-<?php get_header(); ?>
-
+<?php include 'header.php'; ?>
 
 
 <!-- Page Header Start -->
@@ -72,4 +69,4 @@
 </div>
 <!-- Contact End -->
 
-<?php get_footer(); ?>
+<?php include 'footer.php'; ?>

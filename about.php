@@ -1,4 +1,5 @@
-<?php get_header(); ?>
+<?php include 'header.php'; ?>
+
 <!-- Page Header Start -->
 <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
     <div class="container text-center py-5">
@@ -75,5 +76,4 @@
 
 <!--WIP-->
 
-<?php get_footer();?>
-
+<?php include 'footer.php'; ?>

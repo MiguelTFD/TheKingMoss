@@ -12,10 +12,10 @@
             </div>
             <div class="col-lg-6 col-md-6">
                 <h4 class="text-white mb-4">Quick Links</h4>
-                <a class="btn btn-link" href="#aboutTp">About Us</a>
-                <a class="btn btn-link" href="#contactTp">Contact Us</a>
-                <a class="btn btn-link" href="#servicesTp">Our Services</a>
-                <a class="btn btn-link" href="#contactTp">Support</a>
+                <a class="btn btn-link" href="about.php">About Us</a>
+                <a class="btn btn-link" href="contact.php">Contact Us</a>
+                <a class="btn btn-link" href="services.php">Our Services</a>
+                <a class="btn btn-link" href="contact.php">Support</a>
             </div>
         </div>
     </div>

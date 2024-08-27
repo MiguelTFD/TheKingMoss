@@ -204,7 +204,7 @@ h6,
 }
 
 .page-header {
-    background: linear-gradient(rgba(146, 147, 2, 0.3), rgba(146, 147, 2, 0.3)), url(../img/carousel-1.jpg) center center no-repeat;
+    background: linear-gradient(rgba(146, 147, 2, 0.3), rgba(146, 147, 2, 0.3)), url(../img/moss-1.webp) center center no-repeat;
     background-size: cover;
 }
 
@@ -538,6 +538,7 @@ h6,
 .carousel-caption{
     background: none !important;
 }
+
  #lgD {
             background-image: linear-gradient(to left, #e8b900 10%, #d4aa00ff 70%,#c29c00 20% ); !important;
             -webkit-background-clip: text;
@@ -571,4 +572,3 @@ h6,
                 left: 100%;
             }
         }
-
