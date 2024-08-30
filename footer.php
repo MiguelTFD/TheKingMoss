@@ -6,7 +6,7 @@
         <div class="row g-5">
             <div class="col-lg-6 col-md-6">
                 <h4 class="text-white mb-4">Our Office</h4>
-                <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i><a href="https://maps.app.goo.gl/Yze77oGf4FVt3t217" target="_blank" id="xdnomas">Junin Satipo Rio Negro</a> </p>
+                <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i> Satipo Rio Negro</p>
                 <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+51 983 929 015</p>
                 <p class="mb-2"><i class="fa fa-envelope me-3"></i>henry.management@thekingmoss.com</p>
             </div>

@@ -539,7 +539,7 @@ h6,
     background: none !important;
 }
 
- #lgD {
+#lgD {
             background-image: linear-gradient(to left, #e8b900 10%, #d4aa00ff 70%,#c29c00 20% ); !important;
             -webkit-background-clip: text;
             color: transparent;
@@ -547,7 +547,7 @@ h6,
             display: inline-block;
             font-weight: bold;
         }
-
+/*
         #lgD::before {
             content: '';
             position: absolute;
@@ -571,4 +571,4 @@ h6,
             to {
                 left: 100%;
             }
-        }
+        }*/
