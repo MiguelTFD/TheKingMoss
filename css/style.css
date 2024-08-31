@@ -10,6 +10,9 @@
     --bs-green:#C4B400;
 
 }
+.FloatingWindow__Container-sc-42h84g-0 .OKGMH a{
+color:red !important;
+}
 
 .back-to-top {
     position: fixed;
@@ -203,8 +206,20 @@ h6,
     }
 }
 
-.page-header {
+.page-about{
     background: linear-gradient(rgba(146, 147, 2, 0.3), rgba(146, 147, 2, 0.3)), url(../img/moss-1.webp) center center no-repeat;
+}
+.page-service{
+    background: linear-gradient(rgba(146, 147, 2, 0.3), rgba(146, 147, 2, 0.3)), url(../img/moss-2.webp) center center no-repeat;
+}
+.page-products{
+    background: linear-gradient(rgba(146, 147, 2, 0.3), rgba(146, 147, 2, 0.3)), url(../img/moss-3.jpeg) center center no-repeat;
+}
+.page-contact{
+    background: linear-gradient(rgba(146, 147, 2, 0.3), rgba(146, 147, 2, 0.3)), url(../img/junin-banner.png) center center no-repeat;
+}
+
+.page-header {
     background-size: cover;
 }
 
