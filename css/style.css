@@ -710,3 +710,13 @@ color: black;
 	width: 2.3em;
 	border-radius: 100%;
 }
+@media (max-width:400px){
+	.tkmlogo{
+		display: none;
+	}
+	.dnf-inner{
+		width:300px;
+		margin-bottom: 9px !important;
+	}
+
+}

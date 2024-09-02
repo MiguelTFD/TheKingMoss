@@ -38,11 +38,11 @@
         <div class="row g-4 portfolio-container">
             <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
                 <div class="portfolio-inner rounded">
-                    <img class="img-fluid" src="img/service-1.jpg" alt="">
+                    <img class="img-fluid" src="img/service-1.webp" alt="" loading="lazy">
                     <div class="portfolio-text">
                         <h4 class="text-white mb-4">Look this quality</h4>
                         <div class="d-flex">
-                            <a class="btn btn-lg-square rounded-circle mx-2" href="img/service-1.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square rounded-circle mx-2" href="img/service-1.webp" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
 
                         </div>
                     </div>
@@ -50,11 +50,11 @@
             </div>
             <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.3s">
                 <div class="portfolio-inner rounded">
-                    <img class="img-fluid" src="img/service-2.jpg" alt="">
+                    <img class="img-fluid" src="img/service-2.webp" alt="" loading="lazy">
                     <div class="portfolio-text">
                         <h4 class="text-white mb-4">Pure green elegance</h4>
                         <div class="d-flex">
-                            <a class="btn btn-lg-square rounded-circle mx-2" href="img/service-2.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square rounded-circle mx-2" href="img/service-2.webp" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
 
                         </div>
                     </div>
@@ -62,11 +62,11 @@
             </div>
             <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.5s">
                 <div class="portfolio-inner rounded">
-                    <img class="img-fluid" src="img/service-3.jpg" alt="">
+                    <img class="img-fluid" src="img/service-3.webp" alt="" loading="lazy">
                     <div class="portfolio-text">
                         <h4 class="text-white mb-4">Simply breathtaking</h4>
                         <div class="d-flex">
-                            <a class="btn btn-lg-square rounded-circle mx-2" href="img/service-3.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square rounded-circle mx-2" href="img/service-3.webp" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
 
                         </div>
                     </div>
@@ -74,11 +74,11 @@
             </div>
             <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.1s">
                 <div class="portfolio-inner rounded">
-                    <img class="img-fluid" src="img/service-4.jpg" alt="">
+                    <img class="img-fluid" src="img/service-4.webp" alt="" loading="lazy">
                     <div class="portfolio-text">
                         <h4 class="text-white mb-4">A masterpiece of nature</h4>
                         <div class="d-flex">
-                            <a class="btn btn-lg-square rounded-circle mx-2" href="img/service-4.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square rounded-circle mx-2" href="img/service-4.webp" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
 
                         </div>
                     </div>
@@ -86,11 +86,11 @@
             </div>
             <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.3s">
                 <div class="portfolio-inner rounded">
-                    <img class="img-fluid" src="img/service-5.jpg" alt="">
+                    <img class="img-fluid" src="img/service-5.webp" alt="" loading="lazy">
                     <div class="portfolio-text">
                         <h4 class="text-white mb-4">Living art in green</h4>
                         <div class="d-flex">
-                            <a class="btn btn-lg-square rounded-circle mx-2" href="img/service-5.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square rounded-circle mx-2" href="img/service-5.webp" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
 
                         </div>
                     </div>
@@ -98,11 +98,11 @@
             </div>
             <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.5s">
                 <div class="portfolio-inner rounded">
-                    <img class="img-fluid" src="img/service-6.jpg" alt="">
+                    <img class="img-fluid" src="img/service-6.webp" alt="" loading="lazy">
                     <div class="portfolio-text">
                         <h4 class="text-white mb-4">Unmatched natural beauty</h4>
                         <div class="d-flex">
-                            <a class="btn btn-lg-square rounded-circle mx-2" href="img/service-6.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square rounded-circle mx-2" href="img/service-6.webp" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
 
                         </div>
                     </div>

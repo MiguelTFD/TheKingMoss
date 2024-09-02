@@ -27,11 +27,11 @@
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="service-item rounded d-flex h-100">
                     <div class="service-img rounded">
-                        <img class="img-fluid" src="img/support.jpg" alt="">
+                        <img class="img-fluid" src="img/support.jpg" alt="" loading="lazy">
                     </div>
                     <div class="service-text rounded p-5">
                         <div class="btn-square rounded-circle mx-auto mb-3">
-                            <img class="img-fluid" src="img/icon/icon-3.png" alt="Icon">
+                            <img class="img-fluid" src="img/icon/icon-3.png" alt="Icon" loading="lazy">
                         </div>
                         <h4 class="mb-3">Personalized Moss Consultation</h4>
                         <p class="mb-4">Expert advice to help you choose the best moss for your needs.</p>
@@ -42,11 +42,11 @@
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                 <div class="service-item rounded d-flex h-100">
                     <div class="service-img rounded">
-                        <img class="img-fluid" src="img/delivery.jpg" alt="">
+                        <img class="img-fluid" src="img/delivery.jpg" alt="" loading="lazy">
                     </div>
                     <div class="service-text rounded p-5">
                         <div class="btn-square rounded-circle mx-auto mb-3">
-                            <img class="img-fluid" src="img/icon/icon-6.png" alt="Icon">
+                            <img class="img-fluid" src="img/icon/icon-6.png" alt="Icon" loading="lazy">
                         </div>
                         <h4 class="mb-3">Nationwide Shipping</h4>
                         <p class="mb-4">Reliable delivery across the country, ensuring your moss arrives fresh and in perfect condition.</p>
@@ -57,11 +57,11 @@
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="service-item rounded d-flex h-100">
                     <div class="service-img rounded">
-                        <img class="img-fluid" src="img/international.jpg" alt="">
+                        <img class="img-fluid" src="img/international.webp" alt="" loading="lazy">
                     </div>
                     <div class="service-text rounded p-5">
                         <div class="btn-square rounded-circle mx-auto mb-3">
-                            <img class="img-fluid" src="img/icon/icon-5.png" alt="Icon">
+                            <img class="img-fluid" src="img/icon/icon-5.png" alt="Icon" loading="lazy">
                         </div>
                         <h4 class="mb-3">International Export Services</h4>
                         <p class="mb-4">Efficient and secure shipping for international customers.</p>
@@ -72,11 +72,11 @@
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="service-item rounded d-flex h-100">
                     <div class="service-img rounded">
-                        <img class="img-fluid" src="img/decoration.png" alt="">
+                        <img class="img-fluid" src="img/decoration.png" alt="" loading="lazy">
                     </div>
                     <div class="service-text rounded p-5">
                         <div class="btn-square rounded-circle mx-auto mb-3">
-                            <img class="img-fluid" src="img/icon/icon-4.png" alt="Icon">
+                            <img class="img-fluid" src="img/icon/icon-4.png" alt="Icon" loading="lazy">
                         </div>
                         <h4 class="mb-3">Custom Moss Arrangements </h4>
                         <p class="mb-4">Tailored moss designs for unique decorative needs.</p>
@@ -87,11 +87,11 @@
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                 <div class="service-item rounded d-flex h-100">
                     <div class="service-img rounded">
-                        <img class="img-fluid" src="img/customSupport.png" alt="">
+                        <img class="img-fluid" src="img/customSupport.png" alt="" loading="lazy">
                     </div>
                     <div class="service-text rounded p-5">
                         <div class="btn-square rounded-circle mx-auto mb-3">
-                            <img class="img-fluid" src="img/icon/icon-8.png" alt="Icon">
+                            <img class="img-fluid" src="img/icon/icon-8.png" alt="Icon" loading="lazy">
                         </div>
                         <h4 class="mb-3">Moss Care and Maintenance Guidance</h4>
                         <p class="mb-4">Tips and instructions to keep your moss looking its best.</p>
@@ -102,11 +102,11 @@
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="service-item rounded d-flex h-100">
                     <div class="service-img rounded">
-                        <img class="img-fluid" src="img/variety.jpg" alt="">
+                        <img class="img-fluid" src="img/variety.webp" alt="" loading="lazy">
                     </div>
                     <div class="service-text rounded p-5">
                         <div class="btn-square rounded-circle mx-auto mb-3">
-                            <img class="img-fluid" src="img/icon/icon-2.png" alt="Icon">
+                            <img class="img-fluid" src="img/icon/icon-2.png" alt="Icon" loading="lazy">
                         </div>
                         <h4 class="mb-3">Exclusive Moss Varieties</h4>
                         <p class="mb-4">Access to rare and unique moss species that aren’t available elsewhere.</p>

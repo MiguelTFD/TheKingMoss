@@ -11,30 +11,30 @@
                 <p class="mb-2"><i class="fa fa-envelope me-3"></i>henry.management@thekingmoss.com</p>
             </div>
             <div class="col-lg-6 col-md-6">
-                <h4 class="text-white mb-4">Quick Links</h4>
-                <a class="btn btn-link" href="about.php">About Us</a>
-                <a class="btn btn-link" href="contact.php">Contact Us</a>
-                <a class="btn btn-link" href="services.php">Our Services</a>
-                <a class="btn btn-link" href="contact.php">Support</a>
-            </div>
-        </div>
-    </div>
+		  <h4 class="text-white mb-4">Quick Links</h4>
+		  <a class="btn btn-link" href="about.php">About Us</a>
+		  <a class="btn btn-link" href="contact.php">Contact Us</a>
+		  <a class="btn btn-link" href="services.php">Our Services</a>
+		  <a class="btn btn-link" href="contact.php">Support</a>
+	 </div>
+</div>
+</div>
 </div>
 <!-- Footer End -->
 
 
 <!-- Copyright Start -->
 <div class="container-fluid copyright py-4">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                &copy; <a class="border-bottom" href="https://thekingmoss.com">The King Moss</a>, All Right Reserved.
-            </div>
-            <div class="col-md-6 text-center text-md-end">
-                Designed By <strong>Grupo Empresarial King Moss SAC</strong>
-            </div>
-        </div>
-    </div>
+<div class="container">
+<div class="row">
+	 <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+		  &copy; <a class="border-bottom" href="https://thekingmoss.com">The King Moss</a>, All Right Reserved.
+	 </div>
+	 <div class="col-md-6 text-center text-md-end">
+		  Designed By <strong>Grupo Empresarial King Moss SAC</strong>
+	 </div>
+</div>
+</div>
 </div>
 <!-- Copyright End -->
 

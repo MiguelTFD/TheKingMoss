@@ -21,7 +21,7 @@
     <div class="container">
         <div class="row g-5 align-items-end">
             <div class="col-lg-3 col-md-5 wow fadeInUp" data-wow-delay="0.1s">
-                <img class="img-fluid rounded" data-wow-delay="0.1s" src="img/about.jpg">
+                <img class="img-fluid rounded" data-wow-delay="0.1s" src="img/about.webp" loading="lazy" >
             </div>
             <div class="col-lg-6 col-md-7 wow fadeInUp" data-wow-delay="0.3s">
                 <h1 class="display-1 text-primary mb-0">No. 1</h1>
@@ -54,7 +54,7 @@
 <!-- About End -->
 
 <!-- Facts Start -->
-<div class="container-fluid facts my-5 py-5" data-parallax="scroll" data-image-src="img/carousel-1.jpg">
+<div class="container-fluid facts my-5 py-5" data-parallax="scroll" data-image-src="img/carousel-1.webp">
     <div class="container py-5">
         <div class="row g-5">
             <div class="col-sm-6 col-lg-6 text-center wow fadeIn" data-wow-delay="0.1s">
