@@ -29,7 +29,6 @@
 
     <!-- Template Stylesheet -->
 	 <link href="css/style.css" rel="stylesheet">
-	 <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
 </head>
 
 <body>
@@ -87,5 +86,7 @@
         <a href="#contactTp" class="btn btn-primary py-4 px-lg-4 rounded-0 d-none d-lg-block">Get A Quote<i class="fa fa-arrow-right ms-3"></i></a>
     </div>
 </nav>
-<div class="elfsight-app-d312e01a-60e1-4836-bbea-4162af925266" data-elfsight-app-lazy></div>
 <!-- Navbar End -->
+
+<?php include 'whatsapp.php'; ?>
+
