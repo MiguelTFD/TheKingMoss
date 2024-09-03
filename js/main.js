@@ -89,9 +89,3 @@ function sendMessage(){
             var wspContainer = document.querySelector('.wsp-1-1');
             wspContainer.classList.toggle('show'); // Alternar la clase 'show'
   });
-  setTimeout(function() {
-            var wspContainer = document.querySelector('.wsp-1-1');
-            if (!wspContainer.classList.contains('show')) {
-                document.querySelector('.btn-base-wsp-contact').click();
-            }
-        }, 6000);
