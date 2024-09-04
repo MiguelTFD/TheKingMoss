@@ -710,6 +710,17 @@ color: black;
 	width: 2.3em;
 	border-radius: 100%;
 }
+.htxt{
+font-size:1.7rem !important;
+}
+
+.htxt2{
+font-size:1.6rem !important;
+}
+.text-right{
+	text-align:right !important;
+}
+
 @media (max-width:400px){
 	.tkmlogo{
 		display: none;
@@ -717,6 +728,9 @@ color: black;
 	.dnf-inner{
 		width:300px;
 		margin-bottom: 9px !important;
+	}
+	.var-txt-vm{
+			  width:90% !important;
 	}
 
 }

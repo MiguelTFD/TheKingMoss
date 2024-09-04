@@ -108,7 +108,6 @@
                 <p class="text-primary mb-4">National Moss Suppliers</p>
                 <h1 class="display-5 mb-4">From the Andes to Your Doorstep</h1>
                 <p class="mb-4">To ensure minimal environmental impact and natural regrowth, we sustainably hand-pick the finest moss from the Peruvian Andes.</p>
-
             </div>
             <div class="col-lg-3 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="row g-5">

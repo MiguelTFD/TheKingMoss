@@ -112,6 +112,9 @@
     </div>
 </div>
 <!-- Projects End -->
+</div>
+
+
 
 
 <?php include 'footer.php'; ?>
