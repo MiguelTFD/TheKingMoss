@@ -16,16 +16,13 @@
                     </div>
                 </div>
 				</div>
-
             <div class="carousel-item">
                 <img class="w-100" src="img/carousel-2.webp" alt="Image" loading="lazy" >
-
                 <div class="carousel-caption">
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-7">
                                 <h1 class="display-1 text-white mb-5 animated slideInDown">Discover the quality and variety of the mosses we offer.</h1>
-
                             </div>
                         </div>
                     </div>

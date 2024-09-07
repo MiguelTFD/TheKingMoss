@@ -1,26 +1,38 @@
-<?php include 'header.php'; ?>
+<?php
+session_start();
+include 'header.php'; 
+include 'entity/Drymoss.php';
+
+if (isset($_SESSION['productos'])) {
+    $productos = $_SESSION['productos'];
+} else {
+   echo "No hay productos disponibles.";
+   $productos = [];
+  exit; 
+}
+?>
 
 <!-- Page Header Start --> 
 <div class="container-fluid page-header page-products py-5 mb-5 wow fadeIn" 
 data-wow-delay="0.1s">
-	<div class="container text-center py-5">
-		<h1 class="display-3 text-white mb-4 animated slideInDown">
-			Products
-		</h1>
-		<nav aria-label="breadcrumb animated slideInDown">
-			<ol class="breadcrumb justify-content-center mb-0"> 
-				<li class="breadcrumb-item">
-					<a href="#">Home</a>
-				</li> 
-				<li class="breadcrumb-item">
-					<a href="#">Pages</a>
-				</li>
-				<li class="breadcrumb-item active" aria-current="page">
-					 Products 
-				</li> 
-			</ol>
-		</nav>
-	</div> 
+   <div class="container text-center py-5">
+      <h1 class="display-3 text-white mb-4 animated slideInDown">
+         Products
+      </h1>
+      <nav aria-label="breadcrumb animated slideInDown">
+         <ol class="breadcrumb justify-content-center mb-0"> 
+            <li class="breadcrumb-item">
+               <a href="#">Home</a>
+            </li> 
+            <li class="breadcrumb-item">
+               <a href="#">Pages</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+               Products 
+            </li> 
+         </ol>
+      </nav>
+   </div> 
 </div> 
 
 <!-- Page Header End -->
@@ -163,54 +175,43 @@ data-wow-delay="0.1s">
 <!-- Projects End -->
 
 <!--slider--> 
-<div class="wrapper"> 
-	<i id="left" class="fa-solid fa-angle-left"></i> 
-	<ul class="carousel"> 
-		<li class="card"> 
-			<div class="img">
-				<img src="images/img-1.jpg" alt="img" draggable="false">
-			</div>
-			<h2>Blanche Pearson</h2> 
-			<span>Sales Manager</span> 
-		</li> 
-		<li class="card"> 
-			<div class="img">
-				<img src="images/img-2.jpg" alt="img" draggable="false">
-			</div>
-			<h2>Joenas Brauers</h2> 
-			<span>Web Developer</span> 
-		</li> 
-		<li class="card"> 
-			<div class="img">
-				<img src="images/img-3.jpg" alt="img" draggable="false">
-			</div>
-			<h2>Lariach French</h2> 
-			<span>Online Teacher</span> 
-		</li> 
-		<li class="card"> 
-			<div class="img">
-				<img src="images/img-4.jpg" alt="img" draggable="false">
-			</div>
-			<h2>James Khosravi</h2> 
-			<span>Freelancer</span> 
-		</li> 
-		<li class="card"> 
-			<div class="img">
-				<img src="images/img-5.jpg" alt="img" draggable="false">
-			</div>
-			<h2>Kristina Zasiadko</h2> 
-			<span>Bank Manager</span> 
-		</li> 
-		<li class="card">
-			<div class="img">
-				<img src="images/img-6.jpg" alt="img" draggable="false">
-			</div>
-			<h2>Donald Horton</h2> 
-			<span>App Designer</span> 
-		</li> 
-	</ul> 
-<i id="right" class="fa-solid fa-angle-right"></i> 
 
-</div> 
+<h1 style="text-align:center">Product sizes</h1>
+
+
+<!--Dry Moss Sizes-->
+<div class="container-xxl py-5">
+   <h2 style="text-align: left;">Dry Moss</h2>
+   <div class="wrp-c">
+      <div class="wrapper"> 
+         <i id="left" class="fa-solid fa-angle-left"></i> 
+         <ul class="carousel"> 
+            <?php foreach ($productos as $producto): ?>
+               <li class="card">
+                  <div class="img">
+                     <img 
+                        src="<?= htmlspecialchars($producto->URL_IMG); ?>" 
+                        alt="img" draggable="false"
+                     >
+                  </div>
+                  <h2><?= htmlspecialchars($producto->nombre); ?></h2>
+                  <span>S/<?= number_format($producto->precio, 2); ?></span>
+                  <div class="dv-btn-ps">
+                     <form action="details.php" method="post">
+                        <input type="hidden" name="id" 
+                        value="<?= $producto->id; ?>">
+                           <button type="submit" 
+                           class="btn btn-primary btn-ps-cp">
+                              Ver más
+                           </button>
+                     </form>
+                  </div>
+               </li>
+            <?php endforeach; ?>
+         </ul> 
+         <i id="right" class="fa-solid fa-angle-right"></i> 
+      </div> 
+   </div>
+</div>
 
 <?php include 'footer.php'; ?>
