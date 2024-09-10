@@ -6,7 +6,7 @@ if (isset($_POST['id'])) {
    $id = $_POST['id'];
 
    $producto = null;
-   foreach ($producto as $p) {
+   foreach ($productos as $p) {
       if ($p->id == $id) {
          $producto = $p;
          break;
@@ -48,30 +48,29 @@ if (isset($_POST['id'])) {
             </div> 
          </div>
          <!--ax-->
-         <div class="d-flex align-items-center">
-            <div style="width: 90%;" class="d-flex flex-column align-items-center">
-                  <form action="buy.php" method="post">
-                     <button class="btn " type="button" onclick="increment()">+</button>
-                     <input id="cantidad" 
-                      type="number" 
-                      class="form-control text-center my-1" 
-                      name="cantidad" 
-                      value="1" 
-                      min="1" 
-                      step="1" 
-                      style="width: 40px;"
-                     >
-                     <button class="btn " type="button" onclick="decrement()">-</button>
-                     <input type="hidden" name="id" 
-                     value="<?= $producto->id; ?>">
+         <div class="d-flex">
+            <div style="width: 90%;" class="d-flex ">
+                  <form  class="d-flex w-100 justify-content-evenly" action="buy.php" method="post">
+                     <div class="d-flex">
+                        <button class="btn " type="button" onclick="decrement()">-</button>
+                        <input id="cantidad" 
+                         type="number" 
+                         class="form-control text-center my-1" 
+                         name="cantidad" 
+                         value="1" 
+                         min="1" 
+                         step="1" 
+                         style="width: 40px;"
+                        >
+                        <button class="btn " type="button" onclick="increment()">+</button>
+                     </div>
+                     <input type="hidden" name="id" value="<?= $producto->id; ?>">
                         <button type="submit" 
                         class="btn btn-primary btn-ps-cp">
                           Comprar 
                         </button>
                   </form>
             </div>
-               <div class="dv-btn-ps">
-               </div>
          </div>
       </div>
    </div>

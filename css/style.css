@@ -1,3 +1,4 @@
+@import url('ticket.css');
 /********** Template CSS **********/
 :root {
     --primary: #C4B400;
@@ -575,16 +576,18 @@ h6,
 	background: white;
 }
 .wsp-1-1{
-		  max-height: 0;
-            opacity: 0;
-            overflow: hidden;
+   display: none;
+   max-height: 0;
+   opacity: 0;
+   overflow: hidden;
 	position:relative;
 	transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
 }
  .wsp-1-1.show {
-            max-height: 1000px; /* Un valor suficientemente grande para permitir que el contenido se expanda */
-            opacity: 1;
-        }
+   display: inherit;
+   max-height: 1000px; /* Un valor suficientemente grande para permitir que el contenido se expanda */
+   opacity: 1;
+}
 .inner_wsp-1-1{
 	inset: auto auto 76px 10px;
 	border-radius:16px;
@@ -592,6 +595,7 @@ h6,
 	box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 30px 0px;
 }
 .dnf-inner{
+
 	position:fixed;
 	z-index: 2147483647;
 	width: 360px;
@@ -853,3 +857,129 @@ font-size:1.6rem !important;
 .carousel .card .img{
    background: var(--primary);
 }
+
+.steps-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+.step {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    color: #007bff;
+    position: relative;
+}
+.step.active {
+    background-color: #007bff;
+    color: white;
+}
+.step.completed {
+    background-color: #28a745;
+    color: white;
+}
+.step.pending {
+    background-color: #f8f9fa;
+    color: #6c757d;
+}
+.step-content {
+    display: none;
+    margin-top: 20px;
+}
+.step-content.active {
+    display: block;
+}
+.step-buttons {
+    margin-top: 20px;
+    text-align: center;
+}
+.step-buttons button {
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.step-buttons button:disabled {
+    background-color: #ccc;
+}
+.confirmation-message {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+    flex-direction: column;
+}
+.confirmation-buttons button {
+    margin: 0 10px;
+}
+@media (max-width: 768px) {
+    .step {
+        margin-bottom: 10px;
+    }
+    .step-buttons button {
+        width: 80%;
+        margin: 5px 0;
+        font-size: 20px;
+        padding: 15px;
+    }
+    .material-symbols-outlined{
+      font-size:30px;
+    }
+}
+
+@media (max-width: 480px) {
+   .step {
+      padding: 8px;
+   }
+   .step-buttons button {
+      padding: 15px;
+      font-size: 20px;
+   }
+}
+
+.py-form{
+   margin:6rem;
+   justify-items: center;
+   grid-gap: 6em;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: 1fr 1fr;
+}
+.imgPayment{
+   width:8rem;
+   height: 8rem;
+}
+
+
+@media(max-width:520px){
+   .py-form{
+      margin: 3rem;
+   }
+   .imgPayment{
+      width: 6rem;
+      height: 6rem;
+   }
+}
+#client-form{
+   width: 80%;
+   margin:0 auto;
+}
+.material-symbols-outlined{
+   font-size: 40px;
+}
+
+@media (max-width: 768px) {
+   .material-symbols-outlined{
+      font-size:35px;
+   }
+}
+.fill-icon{
+   color:#7B311E;
+}
+#step3-content{
+   height: 50vh;
+}
+

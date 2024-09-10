@@ -4,7 +4,6 @@ include 'entity/Drymoss.php'; // Asegúrate de que contiene el array $productos
 
 if (isset($_POST['id'])) {
    $id = $_POST['id'];
-
    $producto = null;
    foreach ($productos as $p) {
       if ($p->id == $id) {
@@ -12,215 +11,369 @@ if (isset($_POST['id'])) {
          break;
       }
    }
-
-   if ($producto) {
-      echo ".";
-   } else {
-      echo "Producto no encontrado.";
-   }
 } else {
    echo "ID de producto no especificado.";
 }
+
+if(isset($_POST['cantidad'])){
+   $can = $_POST['cantidad'];
+}else{
+   echo "Cantidad no valida";
+}
+
+$preTot = $can * $producto->descuento(50);
 ?>
 
- <style>
-        .steps-container {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 20px;
-        }
-        .step {
-            flex: 1;
-            text-align: center;
-            padding: 10px;
-            border: 2px solid #007bff;
-            border-radius: 5px;
-            color: #007bff;
-            position: relative;
-        }
-        .step.active {
-            background-color: #007bff;
-            color: white;
-        }
-        .step.completed {
-            background-color: #28a745;
-            color: white;
-        }
-        .step.pending {
-            background-color: #f8f9fa;
-            color: #6c757d;
-        }
-        .step-content {
-            display: none;
-            margin-top: 20px;
-        }
-        .step-content.active {
-            display: block;
-        }
-        .step-buttons {
-            margin-top: 20px;
-            text-align: center;
-        }
-        .step-buttons button {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            margin: 0 10px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        .step-buttons button:disabled {
-            background-color: #ccc;
-        }
-        .confirmation-message {
-            display: none;
-            text-align: center;
-            margin-top: 20px;
-        }
-        .confirmation-buttons button {
-            margin: 0 10px;
-        }
- /* Responsive Styles */
-        @media (max-width: 768px) {
-            .steps-container {
-                flex-direction: column;
-            }
-            .step {
-                margin-bottom: 10px;
-            }
-            .step-buttons button {
-                width: 100%;
-                margin: 5px 0;
-                padding: 15px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .step {
-                font-size: 14px;
-                padding: 8px;
-            }
-            .step-buttons button {
-                padding: 12px;
-            }
-        }
-    </style>
-
+<style>
+.ticket-system > h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6
+{
+   color:black !important;
+}
+</style>
 
 <div class="steps-container">
-        <div class="step active" id="step1-nav">Método de Pago</div>
-        <div class="step pending" id="step2-nav">Datos del Cliente</div>
-        <div class="step pending" id="step3-nav">Confirmación</div>
-        <div class="step pending" id="step4-nav">Resumen</div>
-    </div>
+   <div class="stp active" id="step1-nav">
+      <span class="material-symbols-outlined fill-icon">
+         payments
+      </span>
+   </div>
+   <div class="stp pending" id="step2-nav">
+      <span class="material-symbols-outlined">
+         id_card
+      </span>
+   </div>
+   <div class="stp pending" id="step3-nav">
+      <span class="material-symbols-outlined">
+      confirmation_number
+      </span> 
+   </div>
+   <div class="stp pending" id="step4-nav">
+      <span class="material-symbols-outlined">
+         verified
+      </span> 
+   </div>
+</div>
 
-    <div class="step-content active" id="step1-content">
-        <h2>Selecciona el Método de Pago</h2>
-        <form id="payment-form">
+<div class="step-content active" id="step1-content">
+    <h2 class="text-center">Selecciona el Método de Pago</h2>
+    <form id="payment-form">
+         <div class="py-form">
             <label>
-                <input type="radio" name="payment" value="credit_card" required> Tarjeta de Crédito
-            </label><br>
+                <input type="radio" name="payment" value="yape" required>
+                <img class="imgPayment" src="img/icon/Yape-logo.png">
+            </label>
             <label>
-                <input type="radio" name="payment" value="paypal" required> PayPal
-            </label><br>
-            <div class="step-buttons">
-                <button type="button" onclick="nextStep()">Siguiente</button>
+                <input type="radio" name="payment" value="plin" required> 
+                <img class="imgPayment" src="img/icon/Plin-logo.png">
+            </label>
+            <label>
+                <input type="radio" name="payment" value="paypal" required>
+                <img class="imgPayment" src="img/icon/Paypal-Logo.png">
+            </label>
+            <label>
+                <input type="radio" name="payment" value="transferencia" required>
+                <img class="imgPayment" src="img/icon/Banco-Logo.png">
+            </label>
+         </div>
+         <div class="step-buttons">
+            <button class="btn btn-primary" 
+            type="button" 
+            onclick="nextStep()">
+               Siguiente
+            </button>
+         </div>
+    </form>
+</div>
+<div class="step-content" id="step2-content">
+   <h2 class="text-center">Ingresa tus Datos</h2>
+   <form id="client-form">
+      <div class="row">
+         <div class="col-md-6">
+            <div class="mb-3">
+               <label name="name"for="inputName" class="form-label">Nombre</label>
+               <input name="name" 
+               type="text" 
+               class="form-control" 
+               id="inputName" 
+               placeholder="Nombre">
             </div>
-        </form>
-    </div>
-
-    <div class="step-content" id="step2-content">
-        <h2>Ingresa tus Datos</h2>
-        <form id="client-form">
-            <label>Nombre:
-                <input type="text" name="name" required>
-            </label><br>
-            <label>Correo:
-                <input type="email" name="email" required>
-            </label><br>
-            <label>Dirección:
-                <input type="text" name="address" required>
-            </label><br>
-            <div class="step-buttons">
-                <button type="button" onclick="prevStep()">Anterior</button>
-                <button type="button" onclick="nextStep()">Siguiente</button>
+         </div>
+         <div class="col-md-6">
+            <div class="mb-3">
+               <label for="inputLastName" class="form-label">Apellido</label>
+               <input name="lastname" 
+               type="text" 
+               class="form-control" 
+               id="inputLastName" 
+               placeholder="Apellido"
+               >
             </div>
-        </form>
-    </div>
-
-    <div class="step-content" id="step3-content">
-        <div class="confirmation-message" id="confirmation-message">
-            <h1>¿Estás seguro de generar una solicitud de compra?</h1>
-            <div class="confirmation-buttons">
-                <button type="button" onclick="submitOrder()">Sí</button>
-                <button type="button" onclick="prevStep()">No</button>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-md-6">
+            <div class="mb-3">
+               <label for="inputEmail4" class="form-label">Email</label>
+               <input name="email" 
+               type="email" 
+               class="form-control" 
+               id="inputEmail4" 
+               placeholder="Email"
+               >
             </div>
-        </div>
-    </div>
+         </div>
+         <div class="col-md-6">
+            <div class="mb-3">
+               <label for="inputDocIde" class="form-label">Doc. Identidad</label>
+               <input type="text" 
+               name="dni" 
+               class="form-control" 
+               id="inputDocIde" 
+               placeholder="DNI"
+               >
+           </div>
+         </div>
+      </div>
+      <div class="mb-3">
+         <label for="inputAddress" class="form-label">Address</label>
+         <input type="text" 
+         name="address" 
+         class="form-control" 
+         id="inputAddress" 
+         placeholder="1234 Main St"
+         >
+      </div>
+      <div class="mb-3">
+         <label for="inputAddress2" class="form-label">Address 2</label>
+         <input type="text" 
+         name="address2"
+         class="form-control" 
+         id="inputAddress2" placeholder="Apartment, studio, or floor">
+      </div>
+      <div class="row">
+         <div class="col-md-4">
+            <div class="mb-3">
+               <label for="inputDepartment" class="form-label">Departamento</label>
+               <input type="text" name="department" class="form-control"
+               id="inputDepartment"
+               placeholder="Lima..."
+               >
+            </div>
+         </div>
+         <div class="col-md-4">
+           <div class="mb-3">
+               <label for="inputProvince" class="form-label">Provincia</label>
+               <input type="text" name="province" class="form-control"
+               id="inputProvince"
+               placeholder="Lima..."
+               >
+           </div>
+         </div>
+         <div class="col-md-4">
+           <div class="mb-3">
+               <label for="inputDistrict" class="form-label">Distrito</label>
+               <input type="text" name="district" class="form-control"
+               id="inputDistrict"
+               placeholder="Ate..."
+               >
+           </div>
+         </div>
+      </div>
+      <div class="step-buttons">
+         <button class="btn btn-secondary" 
+         type="button" 
+         onclick="prevStep()">
+            Anterior
+         </button>
+         <button class="btn btn-primary" 
+         type="button" 
+         onclick="nextStep()">
+            Siguiente
+         </button>
+      </div>
+   </form>
+</div>
 
-    <div class="step-content" id="step4-content">
-        <h2>Resumen de la Compra</h2>
-        <div id="summary"></div>
-    </div>
+<div class="step-content" id="step3-content">
+   <div class="confirmation-message" id="confirmation-message">
+      <h1>¿Estás seguro de generar una solicitud de compra?</h1>
+      <div class="confirmation-buttons">
+         <button type="button" 
+         class="btn btn-success" 
+         onclick="submitOrder()">
+            Sí
+         </button>
+         <button type="button" 
+         class="btn btn-secondary" 
+         onclick="prevStep()">
+            No
+         </button>
+      </div>
+   </div>
+</div>
+<div class="step-content" id="step4-content">
+   <h2 class="text-center">Resumen de la Compra</h2>
+   <div id="summary">
+      <!--Autogenerado-->
+   </div>
+</div>
+<script>
+//Variables
+let currentStep = 1;
 
+
+//Funciones
+
+function randomWord(){
+   fetch('https://random-word-api.herokuapp.com/word?number=2')
+   .then(response => response.json())
+   .then(data => {
+      const randomName = `${data[0]}-${data[1]}`;
+      document.getElementById('randomWord').innerText = randomName;
+   })
+   .catch(error => {
+      document.getElementById('randomWord').innerText = 'Error al cargar las palabras';
+      console.error('Error al obtener las palabras:', error);
+   });
+}
+
+function showStep(step){
+   document.querySelectorAll('.material-symbols-outlined').forEach((element, index)=>{
+      element.className='material-symbols-outlined ' +
+      (index + 1 === step ? 'fill-icon' : (index + 1 < step ? 'fill-icon' : 'pending'));
+   });
+
+   document.querySelectorAll('.step-content').forEach((element, index) => {
+      element.className = 'step-content ' + (index + 1 === step ? 'active' : '');
+   });
+   }
+
+function nextStep() {
+   if (currentStep === 1) {
+      if (document.querySelector('input[name="payment"]:checked')) {
+         currentStep++;
+         showStep(currentStep);
+      }
+      else{
+         alert('Selecciona un método de pago.');
+      }
+   }
+   else if (currentStep === 2) {
+      document.getElementById('confirmation-message').style.display = 'flex';
+      document.getElementById('confirmation-message').style.justifyContent= 'center';
+      document.getElementById('confirmation-message').style.height= '100%';
+      currentStep++;
+      showStep(currentStep);
+   }
+}
+
+function prevStep() {
+   if (currentStep === 3) {
+      document.getElementById('confirmation-message').style.display = 'none';
+   }
+   currentStep--;
+   showStep(currentStep);
+}
+
+function confirmOrder() {
+   document.getElementById('confirmation-message').style.display = 'block';
+}
+
+function submitOrder() {
+   const paymentMethod = document.querySelector('input[name="payment"]:checked').value;
+   const clientForm = document.getElementById('client-form');
+
+   let qrPay = "";
+if (paymentMethod === "yape") {
+   qrPay = "img/yape-qr.png";
+} else if (paymentMethod === "plin") {
+   qrPay = "img/plin-qr.png";
+}
+
+
+   const summary = `
+      <main class="ticket-system">
+         <div class="top">
+         <h1 class="title">
+            Envia una captura de este ticket junto con la constancia de tu pago.
+         </h1>
+         <div class="printer" />
+         </div>
+         <div class="receipts-wrapper">
+            <div class="receipts">
+               <div class="receipt">
+                  <div class="route">
+                     <div class="item">
+                        <span>Producto</span>
+                        <h2><?=$producto->nombre?> X<?=$can?> </h2>
+                     </div>
+                  </div>
+                  <div class="route">
+                     <div class="item">
+                        <span>Metodo de pago</span>
+                        <h2>${paymentMethod}</h2>
+                     </div>
+                     <div class="item">
+                        <span>Total a Pagar</span>
+                        <h2>S/<?=$preTot?></h2>
+                     </div>
+                  </div>
+                  <div class="details">
+                     <div class="item">
+                        <span>Nombre</span>
+                        <h3>${clientForm.name.value} ${clientForm.lastname.value}</h3>
+                     </div>
+                     <div class="item">
+                        <span>DNI</span>
+                        <h3>${clientForm.dni.value}</h3>
+                     </div>
+                     <div class="item">
+                     <span>Direccion</span>
+                     <h3>
+                        ${clientForm.department.value}/
+                        ${clientForm.province.value}/
+                        ${clientForm.district.value}
+                     </h3>
+                     <h6>${clientForm.address.value}</h6>
+                     <h6>${clientForm.address2.value}</h6>
+                     </div>
+                     <div class="item">
+                        <span>Email</span>
+                        <h4>${clientForm.email.value}</h4>
+                     </div>
+                  </div>
+               </div>
+               <div class="receipt qr-code">
+               <div class="qr-dt-con">
+                  <p class="text-center" >Henry Obed Cholan Romero</p>
+                  <img class="qr" src="${qrPay}" alt="qrimg">
+                  <p class="text-center" >+51 983 929 015</p>
+                  </div>
+                  <div  class="description">
+                     <h4 class="text-center" id="randomWord">Cargando...</h4>
+                     <p class="text-center" >Has la tranferencia agregando este codigo como comentario</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </main>
+   `;
+   document.getElementById('summary').innerHTML = summary;
+   currentStep++;
+   showStep(currentStep);
+   randomWord();
+   if (paymentMethod === "yape") {
+    document.querySelector('.description').style.display = "block";
+   } else if (paymentMethod === "plin") {
+ document.querySelector('.description').style.display = "none";
+}
+
+}
+
+
+//Llamadas
+showStep(currentStep);
+randomWord();
+</script>
 
 <?php include 'footer.php';?>
-<script>
-        let currentStep = 1;
-
-        function showStep(step) {
-            document.querySelectorAll('.step').forEach((element, index) => {
-                element.className = 'step ' + (index + 1 === step ? 'active' : (index + 1 < step ? 'completed' : 'pending'));
-            });
-
-            document.querySelectorAll('.step-content').forEach((element, index) => {
-                element.className = 'step-content ' + (index + 1 === step ? 'active' : '');
-            });
-        }
-
-        function nextStep() {
-            if (currentStep === 1) {
-                if (document.querySelector('input[name="payment"]:checked')) {
-                    currentStep++;
-                    showStep(currentStep);
-                } else {
-                    alert('Selecciona un método de pago.');
-                }
-            } else if (currentStep === 2) {
-                // Ensure confirmation step is activated
-                document.getElementById('confirmation-message').style.display = 'block';
-                currentStep++;
-                showStep(currentStep);
-            }
-        }
-
-        function prevStep() {
-            if (currentStep === 3) {
-                document.getElementById('confirmation-message').style.display = 'none';
-            }
-            currentStep--;
-            showStep(currentStep);
-        }
-
-        function confirmOrder() {
-            document.getElementById('confirmation-message').style.display = 'block';
-        }
-
-        function submitOrder() {
-            const paymentMethod = document.querySelector('input[name="payment"]:checked').value;
-            const clientForm = document.getElementById('client-form');
-            const summary = `
-                <h3>Método de Pago: ${paymentMethod}</h3>
-                <h4>Datos del Cliente:</h4>
-                <p>Nombre: ${clientForm.name.value}</p>
-                <p>Correo: ${clientForm.email.value}</p>
-                <p>Dirección: ${clientForm.address.value}</p>
-            `;
-            document.getElementById('summary').innerHTML = summary;
-            currentStep++;
-            showStep(currentStep);
-        }
-
-        showStep(currentStep);
-    </script>
