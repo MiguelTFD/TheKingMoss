@@ -24,6 +24,46 @@ if(isset($_POST['cantidad'])){
 $preTot = $can * $producto->descuento(50);
 ?>
 
+   <script 
+   src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js">
+   </script>
+ <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Tiempo en minutos
+            const timeoutMinutes = 20;
+            const timeoutMilliseconds = timeoutMinutes * 60 * 1000; // Convertir minutos a milisegundos
+
+            // Función para redirigir al usuario y limpiar los datos
+            function redirectToPreviousPage() {
+                // Eliminar datos del localStorage (si es que usas localStorage)
+                localStorage.removeItem('formData');
+
+                // Redirigir a la página anterior
+                window.history.back();
+            }
+
+            // Configurar el temporizador
+            setTimeout(redirectToPreviousPage, timeoutMilliseconds);
+
+            // Opcional: Mostrar un temporizador en la página
+            const timerDisplay = document.getElementById('timer');
+            if (timerDisplay) {
+                let timeLeft = timeoutMilliseconds;
+                const updateTimer = () => {
+                    const minutes = Math.floor(timeLeft / 60000);
+                    const seconds = Math.floor((timeLeft % 60000) / 1000);
+                    timerDisplay.textContent = `${minutes}m ${seconds}s`;
+                    timeLeft -= 1000;
+                    if (timeLeft < 0) {
+                        clearInterval(timerInterval);
+                    }
+                };
+
+                updateTimer(); // Inicializar el temporizador
+                const timerInterval = setInterval(updateTimer, 1000); // Actualizar cada segundo
+            }
+        });
+    </script>
 <style>
 .ticket-system > h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6
 {
@@ -31,6 +71,16 @@ $preTot = $can * $producto->descuento(50);
 }
 </style>
 
+<div style="margin:10px 0px" 
+class="d-flex w-100 align-items-center justify-content-left g-9" >
+<span style="color: #7B311E;" class="material-symbols-outlined p-20">
+timer
+</span>
+<div style="color:#7B311E;font-weight: bold;font-size:2em;
+text-align: center;width:fit-content;padding:20px 0" id="timer">
+   20m 0s
+</div>
+</div>
 <div class="steps-container">
    <div class="stp active" id="step1-nav">
       <span class="material-symbols-outlined fill-icon">
@@ -86,16 +136,20 @@ $preTot = $can * $producto->descuento(50);
 </div>
 <div class="step-content" id="step2-content">
    <h2 class="text-center">Ingresa tus Datos</h2>
-   <form id="client-form">
+   <form id="client-form" onsubmit="return validateAndNextStep(event)">
       <div class="row">
          <div class="col-md-6">
             <div class="mb-3">
                <label name="name"for="inputName" class="form-label">Nombre</label>
                <input name="name" 
-               type="text" 
+               type="text"
                class="form-control" 
                id="inputName" 
-               placeholder="Nombre">
+               placeholder="Nombre"
+               pattern="[A-Za-z\s]{2,50}"
+               title="Nombre no valido"
+               required
+               >
             </div>
          </div>
          <div class="col-md-6">
@@ -106,10 +160,12 @@ $preTot = $can * $producto->descuento(50);
                class="form-control" 
                id="inputLastName" 
                placeholder="Apellido"
+               pattern="[A-Za-z\s]{2,50}"
+               title="Apellido no valido"
+               required
                >
             </div>
-         </div>
-      </div>
+         </div> </div>
       <div class="row">
          <div class="col-md-6">
             <div class="mb-3">
@@ -119,6 +175,9 @@ $preTot = $can * $producto->descuento(50);
                class="form-control" 
                id="inputEmail4" 
                placeholder="Email"
+               pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+               title="PorFavor ingresa un correo valido"
+               required
                >
             </div>
          </div>
@@ -130,6 +189,9 @@ $preTot = $can * $producto->descuento(50);
                class="form-control" 
                id="inputDocIde" 
                placeholder="DNI"
+               pattern="\d{8}"
+               title="El documento de identidad debe tener exactamente 8 digitos"
+               required
                >
            </div>
          </div>
@@ -141,6 +203,9 @@ $preTot = $can * $producto->descuento(50);
          class="form-control" 
          id="inputAddress" 
          placeholder="1234 Main St"
+         pattern="[a-zA-Z0-9. ]+"
+         title="La dirección solo puede contener letras, números, puntos y espacios"   
+         required
          >
       </div>
       <div class="mb-3">
@@ -148,7 +213,10 @@ $preTot = $can * $producto->descuento(50);
          <input type="text" 
          name="address2"
          class="form-control" 
-         id="inputAddress2" placeholder="Apartment, studio, or floor">
+         id="inputAddress2" placeholder="Apartment, studio, or floor"
+         pattern="[a-zA-Z0-9. ]+"
+         title="La dirección solo puede contener letras, números, puntos y espacios"
+         >
       </div>
       <div class="row">
          <div class="col-md-4">
@@ -157,6 +225,9 @@ $preTot = $can * $producto->descuento(50);
                <input type="text" name="department" class="form-control"
                id="inputDepartment"
                placeholder="Lima..."
+               pattern="[a-zA-Z]+"
+               title="Departamento Invalido"
+               required
                >
             </div>
          </div>
@@ -166,6 +237,9 @@ $preTot = $can * $producto->descuento(50);
                <input type="text" name="province" class="form-control"
                id="inputProvince"
                placeholder="Lima..."
+               pattern="[a-zA-Z]+"
+               title="Provincia invalida"
+               required
                >
            </div>
          </div>
@@ -175,6 +249,9 @@ $preTot = $can * $producto->descuento(50);
                <input type="text" name="district" class="form-control"
                id="inputDistrict"
                placeholder="Ate..."
+               pattern="[a-zA-Z]+"
+               title="Distrito invalido"
+               required
                >
            </div>
          </div>
@@ -185,9 +262,10 @@ $preTot = $can * $producto->descuento(50);
          onclick="prevStep()">
             Anterior
          </button>
-         <button class="btn btn-primary" 
-         type="button" 
-         onclick="nextStep()">
+         <button class="btn btn-primary"
+         id="btn-registra"
+         type="submit" 
+         >
             Siguiente
          </button>
       </div>
@@ -217,12 +295,16 @@ $preTot = $can * $producto->descuento(50);
       <!--Autogenerado-->
    </div>
 </div>
+
+
 <script>
 //Variables
 let currentStep = 1;
 
 
 //Funciones
+
+
 
 function randomWord(){
    fetch('https://random-word-api.herokuapp.com/word?number=2')
@@ -289,7 +371,7 @@ if (paymentMethod === "yape") {
 } else if (paymentMethod === "plin") {
    qrPay = "img/plin-qr.png";
 }
-
+confetti();
 
    const summary = `
       <main class="ticket-system">
@@ -351,7 +433,10 @@ if (paymentMethod === "yape") {
                   </div>
                   <div  class="description">
                      <h4 class="text-center" id="randomWord">Cargando...</h4>
-                     <p class="text-center" >Has la tranferencia agregando este codigo como comentario</p>
+                     <p class="text-center">
+                        Has la tranferencia 
+                        agregando este codigo como comentario
+                     </p>
                   </div>
                </div>
             </div>
@@ -367,9 +452,45 @@ if (paymentMethod === "yape") {
    } else if (paymentMethod === "plin") {
  document.querySelector('.description').style.display = "none";
 }
-
 }
 
+//validar documentos
+document.addEventListener('DOMContentLoaded', function () {
+   const form = document.getElementById('client-form');
+   const inputs = form.querySelectorAll('input');
+
+   inputs.forEach(input => {
+      input.addEventListener('input', function () {
+         if (input.validity.valueMissing) {
+            input.setCustomValidity('Por favor, completa este campo.');
+         } else if (input.validity.patternMismatch) {
+            input.setCustomValidity(input.title);  // Utiliza el mensaje en el 
+            //atributo title
+         } else {
+            input.setCustomValidity('');  // Restablece el mensaje personalizado 
+            //si todo está bien
+         }
+      });
+   });
+
+   form.addEventListener('submit', function (event) {
+      if (!form.checkValidity()) {
+         event.preventDefault();  // Prevenir el envío si hay errores
+      }
+   });
+});
+
+
+function validateAndNextStep(event) {
+      event.preventDefault();
+      const form = document.getElementById('client-form');
+      if (form.checkValidity()) {
+         nextStep();
+      } else {
+         form.reportValidity();
+      }
+      return false;
+   }
 
 //Llamadas
 showStep(currentStep);
