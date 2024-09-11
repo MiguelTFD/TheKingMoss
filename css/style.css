@@ -679,22 +679,6 @@ line-height: 20px;
 max-height: 60px;
 line-clamp: 3;
 display: -webkit-box;
--moz-box-orient: vertical;
-overflow: hidden;
-color: rgb(17, 17, 17);
-}
-.usrname{
-margin:0px 0px 0px 6px !important;
-}
-.send-label{
-cursor:text;
-height: 20px !important;
-color: rgba(17, 17, 17, 0.3);
-resize: none;
-border-color: rgba(0, 0, 0, 0);
-font-size:14px;
-outline: none;
-overflow: scroll;
 min-width: 28px;
 max-height: 64px;
 width: 80%;
@@ -824,7 +808,7 @@ font-size:1.6rem !important;
 }
 .carousel .card h2 {
   font-weight: 500;
-  font-size: 1.56rem;
+  font-size: 1.3rem;
   margin: 30px 0 5px;
 }
 .carousel .card span {
@@ -981,5 +965,22 @@ font-size:1.6rem !important;
 }
 #step3-content{
    height: 50vh;
+}
+@media(max-width:1000px){
+   
+   #theader{
+      display:flex !important;
+   }
+   #f-contact{
+      display:none !important;
+   }
+   #sp-pp{
+      text-align:center !important;
+      font-size:0.8rem !important;
+   }
+   #tp-sp-pp{
+      text-align:center !important;
+   }
+
 }
 

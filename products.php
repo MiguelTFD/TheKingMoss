@@ -11,6 +11,8 @@ if (isset($_SESSION['productos'])) {
   exit; 
 }
 ?>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
 
 <!-- Page Header Start --> 
 <div class="container-fluid page-header page-products py-5 mb-5 wow fadeIn" 
@@ -134,7 +136,7 @@ data-wow-delay="0.1s">
 				</div>
 			</div>
  			<div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp"
-			data-wow-delay="0.3s"> 
+         data-wow-delay="0.3s"> 
 				<div class="portfolio-inner rounded"> 
 					<img class="img-fluid" src="img/service-5.webp" alt="" 
 					loading="lazy"> 
@@ -175,9 +177,12 @@ data-wow-delay="0.1s">
 <!-- Projects End -->
 
 <!--slider--> 
-
-<h1 style="text-align:center">Product sizes</h1>
-
+<div style="display:flex;align-items: center;justify-content: center;">
+   <span style="color:#929302;font-size:40px" class="material-symbols-outlined">
+      storefront
+   </span>
+<h1 style="width: fit-content;margin:0">Store</h1>
+</div>
 
 <!--Dry Moss Sizes-->
 <div class="container-xxl py-5">
@@ -195,7 +200,14 @@ data-wow-delay="0.1s">
                      >
                   </div>
                   <h2><?= htmlspecialchars($producto->nombre); ?></h2>
-                  <span>S/<?= number_format($producto->precio, 2); ?></span>
+                  <div class="d-flex align-items-center gap-3 m-1">
+                     <p style="color:gray;text-decoration: line-through;">
+                        S/<?=htmlspecialchars($producto->precio)?>
+                     </p>
+                     <p style="color:#7B311E;">
+                        S/<?=htmlspecialchars($producto->descuento(50))?>
+                     </p> 
+                  </div> 
                   <div class="dv-btn-ps">
                      <form action="details.php" method="post">
                         <input type="hidden" name="id" 

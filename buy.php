@@ -72,8 +72,8 @@ $preTot = $can * $producto->descuento(50);
 </style>
 
 <div style="margin:10px 0px" 
-class="d-flex w-100 align-items-center justify-content-left g-9" >
-<span style="color: #7B311E;" class="material-symbols-outlined p-20">
+class="d-flex w-100 align-items-center justify-content-center g-9" >
+<span style="color:#7B311E" class="material-symbols-outlined">
 timer
 </span>
 <div style="color:#7B311E;font-weight: bold;font-size:2em;
@@ -83,22 +83,22 @@ text-align: center;width:fit-content;padding:20px 0" id="timer">
 </div>
 <div class="steps-container">
    <div class="stp active" id="step1-nav">
-      <span class="material-symbols-outlined fill-icon">
+      <span class="material-symbols-outlined st-icon fill-icon">
          payments
       </span>
    </div>
    <div class="stp pending" id="step2-nav">
-      <span class="material-symbols-outlined">
+      <span class="material-symbols-outlined st-icon ">
          id_card
       </span>
    </div>
    <div class="stp pending" id="step3-nav">
-      <span class="material-symbols-outlined">
+      <span class="material-symbols-outlined st-icon ">
       confirmation_number
       </span> 
    </div>
    <div class="stp pending" id="step4-nav">
-      <span class="material-symbols-outlined">
+      <span class="material-symbols-outlined st-icon ">
          verified
       </span> 
    </div>
@@ -320,8 +320,8 @@ function randomWord(){
 }
 
 function showStep(step){
-   document.querySelectorAll('.material-symbols-outlined').forEach((element, index)=>{
-      element.className='material-symbols-outlined ' +
+   document.querySelectorAll('.st-icon').forEach((element, index)=>{
+      element.className='material-symbols-outlined st-icon ' +
       (index + 1 === step ? 'fill-icon' : (index + 1 < step ? 'fill-icon' : 'pending'));
    });
 

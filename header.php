@@ -1,21 +1,32 @@
 <!DOCTYPE html>
 <html lang="en" style="margin-top: 0px !important;">
-
 <head>
-    <meta charset="utf-8">
-    <link rel="shortcut icon" type="x-icon" href="img/icon/Logo.png" >
-    <title>The King Moss</title>
-	 
-	 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-
-    <meta content="" name="keywords">
-				<meta content="" name="description">
-
-				<!-- Google Web Fonts -->
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-				<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-				<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+   <meta charset="utf-8">
+   <link rel="shortcut icon" type="x-icon" href="img/icon/Logo.png" >
+   <title>The King Moss</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+   <meta content="" name="keywords">
+   <meta content="" name="description">
+   <!-- Google Web Fonts -->
+   <link 
+      rel="preconnect" 
+      href="https://fonts.googleapis.com"
+   >
+   <link 
+      rel="stylesheet" 
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:"
+      "opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" 
+   />
+   <link 
+      rel="preconnect" 
+      href="https://fonts.gstatic.com" 
+      crossorigin
+   >
+   <link 
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family="   
+      "Open+Sans:wght@400;500&display=swap" 
+      rel="stylesheet"
+   >
 
 
 				<!-- Icon Font Stylesheet -->
@@ -44,8 +55,8 @@
 
 		  <!-- Topbar Start -->
 		  <div class="container-fluid bg-dark text-light px-0 py-2">
-				<div class="row gx-0 d-none d-lg-flex">
-					 <div class="col-lg-7 px-5 text-start">
+				<div id="theader" class="row gx-0 d-none d-lg-flex">
+					 <div id="f-contact" class="col-lg-7 px-5 text-start">
 						  <div class="h-100 d-inline-flex align-items-center me-4">
 								<span class="fa fa-phone-alt me-2"></span>
 								<span>+51 983 929 015</span>
@@ -58,9 +69,9 @@
 
 
 
-					 <div class="col-lg-5 px-5 text-end">
+					 <div id="tp-sp-pp" class="col-lg-5 px-5 text-end">
 						  <div class="h-100 d-inline-flex align-items-center mx-n2">
-								<span>Soon Importaciones Power Plant (RUC: 10724859441) will be Grupo Empresarial King Moss SAC.</span>
+								<span id="sp-pp">Soon Importaciones Power Plant (RUC: 10724859441) will be Grupo Empresarial King Moss SAC.</span>
 
 						  </div>
 					 </div>
