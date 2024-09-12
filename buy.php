@@ -1,32 +1,28 @@
 <?php include 'header.php';?>
 <?php
-include 'entity/Drymoss.php'; // Asegúrate de que contiene el array $productos
-
-if (isset($_POST['id'])) {
-   $id = $_POST['id'];
-   $producto = null;
-   foreach ($productos as $p) {
-      if ($p->id == $id) {
-         $producto = $p;
-         break;
-      }
-   }
-} else {
-   echo "ID de producto no especificado.";
-}
-
-if(isset($_POST['cantidad'])){
-   $can = $_POST['cantidad'];
-}else{
-   echo "Cantidad no valida";
-}
-
-$preTot = $can * $producto->descuento(50);
+    include 'entity/Drymoss.php'; 
+    if (isset($_POST['id'])) {
+        $id = $_POST['id'];
+        $producto = null;
+        foreach ($productos as $p) {
+            if ($p->id == $id) {
+                $producto = $p;
+                break;
+            }
+        }
+    } else {
+       echo "ID de producto no especificado.";
+    }
+    
+    if(isset($_POST['cantidad'])){
+        $can = $_POST['cantidad'];
+    }else{
+       echo "Cantidad no valida";
+    }
+    
+    $preTot = $can * $producto->descuento(50);
 ?>
 
-   <script 
-   src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js">
-   </script>
  <script>
         document.addEventListener('DOMContentLoaded', function () {
             // Tiempo en minutos

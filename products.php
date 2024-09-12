@@ -11,8 +11,6 @@ if (isset($_SESSION['productos'])) {
   exit; 
 }
 ?>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
 
 <!-- Page Header Start --> 
 <div class="container-fluid page-header page-products py-5 mb-5 wow fadeIn" 

@@ -54,6 +54,12 @@
 <script src="lib/parallax/parallax.min.js"></script>
 <script src="lib/isotope/isotope.pkgd.min.js"></script>
 <script src="lib/lightbox/js/lightbox.min.js"></script>
+<script 
+    src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2
+    /dist/confetti.browser.min.js"
+>
+</script>
+
 
 <!-- Template Javascript -->
 <script src="js/main.js"></script>
