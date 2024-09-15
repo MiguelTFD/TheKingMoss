@@ -134,7 +134,7 @@ data-wow-delay="0.1s">
 				</div>
 			</div>
  			<div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp"
-         data-wow-delay="0.3s"> 
+			data-wow-delay="0.3s"> 
 				<div class="portfolio-inner rounded"> 
 					<img class="img-fluid" src="img/service-5.webp" alt="" 
 					loading="lazy"> 
@@ -175,12 +175,14 @@ data-wow-delay="0.1s">
 <!-- Projects End -->
 
 <!--slider--> 
+
 <div style="display:flex;align-items: center;justify-content: center;">
    <span style="color:#929302;font-size:40px" class="material-symbols-outlined">
       storefront
    </span>
 <h1 style="width: fit-content;margin:0">Store</h1>
 </div>
+
 
 <!--Dry Moss Sizes-->
 <div class="container-xxl py-5">
@@ -205,8 +207,8 @@ data-wow-delay="0.1s">
                      <p style="color:#7B311E;">
                         S/<?=htmlspecialchars($producto->descuento(50))?>
                      </p> 
-                  </div> 
-                  <div class="dv-btn-ps">
+                  </div>
+                     <div class="dv-btn-ps">
                      <form action="details.php" method="post">
                         <input type="hidden" name="id" 
                         value="<?= $producto->id; ?>">
