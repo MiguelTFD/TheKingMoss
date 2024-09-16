@@ -46,11 +46,14 @@
         time: 2000
     });
 
-    $(window).on('load', function() {
+$(window).on('load', function() {
+   // Inicializa Isotope después de que la ventana esté completamente cargada
    var portfolioIsotope = $('#ct-productos-25').isotope({
       itemSelector: '.portfolio-item',
+      layoutMode: 'fitRows'
    });
 
+   // Filtrado de elementos al hacer clic en los filtros
    $('#portfolio-flters li').on('click', function () {
       $("#portfolio-flters li").removeClass('active');
       $(this).addClass('active');
