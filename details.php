@@ -22,11 +22,16 @@ if (isset($_POST['id'])) {
    echo "ID de producto no especificado.";
 }
 ?>
+<style>
+#cn-img{
+border-radius:15px;
+} 
+</style>
 <div class="container">
    <div class="row">
       <div class="col-md-6">
          <div class="p-3 ">
-            <img style="width: 100%;" 
+            <img id="cn-img" style="width: 100%;" 
                src="<?= htmlspecialchars($producto->URL_IMG); ?>" 
                alt="img" draggable="false"
             >

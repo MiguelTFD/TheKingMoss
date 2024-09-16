@@ -188,6 +188,52 @@ text-align: center;width:fit-content;padding:20px 0" id="timer">
            </div>
          </div>
       </div>
+      <div class="row">
+         <div class="col-md-6">
+            <div class="mb-3">
+               <label name="telefono"for="inputfono" class="form-label">Telefono</label>
+               <input name="telefono" 
+               type="text"
+               class="form-control" 
+               id="inputfono" 
+               placeholder="Telefono"
+               pattern="\d{9}"
+               title="El Telefono debe tener 9 digitos"
+               required
+               >
+            </div>
+         </div>
+<div class="col-md-3">
+    <div class="mb-3">
+        <label for="selectAgencia" class="form-label">Agencia</label>
+        <select id="selectAgencia" name="agencia" class="form-control" onchange="toggleOtherField()" required>
+            <option value="" selected>Seleccione...</option>
+            <option value="shalom">Shalom</option>
+            <option value="${otherAValue}">Otro</option>
+        </select>
+    </div>
+</div> 
+<div class="col-md-3">
+    
+    <div class="mb-3" id="otherAgenciaField" style="display: none;">
+        <label for="inputOtherAgencia" class="form-label">Especificar otra agencia</label>
+        <input type="text" id="inputOtherAgencia" name="other_agencia" class="form-control" placeholder="Nombre de la agencia">
+    </div>
+</div>
+</div>
+
+      <div class="mb-3">
+         <label for="inputAgenciaDir" class="form-label">Lugar de Agencia</label>
+         <input type="text" 
+         name="dirAgencia" 
+         class="form-control" 
+         id="inputAgenciaDir" 
+         placeholder="1234 Main St"
+         pattern="[a-zA-Z0-9. ]+"
+         title="La dirección de agencia solo puede contener letras, números, puntos y espacios"   
+         required
+         >
+      </div>
       <div class="mb-3">
          <label for="inputAddress" class="form-label">Address</label>
          <input type="text" 
@@ -293,6 +339,7 @@ text-align: center;width:fit-content;padding:20px 0" id="timer">
 //Variables
 let currentStep = 1;
 
+let otherAValue= document.getElementById("inputOtherAgencia").value;
 
 //Funciones
 
@@ -410,6 +457,9 @@ confetti();
                      </h3>
                      <h6>${clientForm.address.value}</h6>
                      <h6>${clientForm.address2.value}</h6>
+                    <span> Agencia</span>
+                    <h5>${clientForm.agencia.value} </h5>
+                    <h6>${clientForm.dirAgencia.value}</h6>
                      </div>
                      <div class="item">
                         <span>Email</span>
@@ -471,6 +521,26 @@ document.addEventListener('DOMContentLoaded', function () {
       }
    });
 });
+
+function toggleOtherField() {
+    var select = document.getElementById('selectAgencia');
+    var otherField = document.getElementById('otherAgenciaField');
+
+  // Hide "Seleccione..." option when any other option is selected
+    var selectOption = select.querySelector('option[value=""]');
+    if (select.value !== "" && selectOption) {
+        selectOption.style.display = 'none';
+    } else if (select.value === "") {
+        // Show "Seleccione..." option if it is selected
+        selectOption.style.display = 'block';
+    }
+    
+    if (select.value !== 'shalom') {
+        otherField.style.display = 'block';
+    } else {
+        otherField.style.display = 'none';
+    }
+}
 
 
 function validateAndNextStep(event) {

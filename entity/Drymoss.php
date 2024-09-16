@@ -30,7 +30,7 @@ $productos = [
       "img/bp5k.webp"
    ),
 
-   new Producto(
+/*   new Producto(
       3,
       80,
       "Bloque fibra 2.5Kg",
@@ -42,7 +42,7 @@ $productos = [
       45,
       "img/bf2_5k.webp"
    ),
-
+ 
    new Producto(
       4,
       40,
@@ -55,7 +55,7 @@ $productos = [
       45,
       "img/bp2_5k.webp"
    ),
-
+ */
    new Producto(
       5,
       40,

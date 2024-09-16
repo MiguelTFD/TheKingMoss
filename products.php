@@ -1,17 +1,4 @@
-<?php
-session_start();
-include 'header.php'; 
-include 'entity/Drymoss.php';
-
-if (isset($_SESSION['productos'])) {
-    $productos = $_SESSION['productos'];
-} else {
-   echo "No hay productos disponibles.";
-   $productos = [];
-  exit; 
-}
-?>
-
+<?php include_once 'header.php' ?>
 <!-- Page Header Start --> 
 <div class="container-fluid page-header page-products py-5 mb-5 wow fadeIn" 
 data-wow-delay="0.1s">
@@ -176,54 +163,7 @@ data-wow-delay="0.1s">
 
 <!--slider--> 
 
-<div style="display:flex;align-items: center;justify-content: center;">
-   <span style="color:#929302;font-size:40px" class="material-symbols-outlined">
-      storefront
-   </span>
-<h1 style="width: fit-content;margin:0">Store</h1>
-</div>
 
 
-<!--Dry Moss Sizes-->
-<div class="container-xxl py-5">
-   <h2 style="text-align: left;">Dry Moss</h2>
-   <div class="wrp-c">
-      <div class="wrapper"> 
-         <i id="left" class="fa-solid fa-angle-left"></i> 
-         <ul class="carousel"> 
-            <?php foreach ($productos as $producto): ?>
-               <li class="card">
-                  <div class="img">
-                     <img 
-                        src="<?= htmlspecialchars($producto->URL_IMG); ?>" 
-                        alt="img" draggable="false"
-                     >
-                  </div>
-                  <h2><?= htmlspecialchars($producto->nombre); ?></h2>
-                  <div class="d-flex align-items-center gap-3 m-1">
-                     <p style="color:gray;text-decoration: line-through;">
-                        S/<?=htmlspecialchars($producto->precio)?>
-                     </p>
-                     <p style="color:#7B311E;">
-                        S/<?=htmlspecialchars($producto->descuento(50))?>
-                     </p> 
-                  </div>
-                     <div class="dv-btn-ps">
-                     <form action="details.php" method="post">
-                        <input type="hidden" name="id" 
-                        value="<?= $producto->id; ?>">
-                           <button type="submit" 
-                           class="btn btn-primary btn-ps-cp">
-                              Ver más
-                           </button>
-                     </form>
-                  </div>
-               </li>
-            <?php endforeach; ?>
-         </ul> 
-         <i id="right" class="fa-solid fa-angle-right"></i> 
-      </div> 
-   </div>
-</div>
 
 <?php include 'footer.php'; ?>

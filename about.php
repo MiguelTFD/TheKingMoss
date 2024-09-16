@@ -119,17 +119,17 @@
         <div class="row g-4 portfolio-container align-items-center justify-content-center">
             <div class="portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
 					 <div class="rounded">
-							<p class="htxt2"> Our company's vision is to become a national and international 
-								leader in our field, providing quality service while fostering the ecological
-								 and financial growth of our country.
+							<p class="htxt2"> Our mission is to provide our customers with the best possible 
+								experience and the highest-quality products at the best possible price. We are
+								committed to maintaining the highest standards of quality and safety.
 							</p>
 					 </div>
 				</div>
             <div class="portfolio-item second wow fadeInUp" data-wow-delay="0.1s">
 					 <div class="rounded">
-							<p class="htxt2"> Our mission is to provide our customers with the best possible 
-								experience and the highest-quality products at the best possible price. We are
-								committed to maintaining the highest standards of quality and safety.
+							<p class="htxt2"> Our company's vision is to become a national and international 
+								leader in our field, providing quality service while fostering the ecological
+								 and financial growth of our country.
 							</p>
 					 </div>
 				</div>
