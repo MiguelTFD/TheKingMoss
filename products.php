@@ -3,7 +3,12 @@
 .portfolio-item{
 position: inherit;
 }
+#ct-productos-25 {
+    height: fit-content !important;
+    position: relative;
+}
 </style>
+
 
 <!-- Page Header Start --> 
 <div class="container-fluid page-header page-products py-5 mb-5 wow fadeIn" 

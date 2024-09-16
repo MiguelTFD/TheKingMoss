@@ -46,25 +46,6 @@
         time: 2000
     });
 
-$(window).on('load', function() {
-   // Inicializa Isotope después de que la ventana esté completamente cargada
-   var portfolioIsotope = $('#ct-productos-25').isotope({
-      itemSelector: '.portfolio-item',
-      layoutMode: 'fitRows'
-   });
-
-   // Filtrado de elementos al hacer clic en los filtros
-   $('#portfolio-flters li').on('click', function () {
-      $("#portfolio-flters li").removeClass('active');
-      $(this).addClass('active');
-
-      var filterValue = $(this).data('filter');
-      portfolioIsotope.isotope({ filter: filterValue });
-   });
-});
-
-
-
     // Testimonials carousel
     $(".testimonial-carousel").owlCarousel({
         autoplay: true,
@@ -174,6 +155,25 @@ const autoPlay = () => {
     // Autoplay the carousel after every 2500 ms
     timeoutId = setTimeout(() => carousel.scrollLeft += firstCardWidth, 2500);
 }
+
+
+$(window).on('load', function() {
+    // Inicializar Isotope después de que todos los recursos se hayan cargado
+    var portfolioIsotope = $('#ct-productos-25').isotope({
+        itemSelector: '.portfolio-item',
+        layoutMode: 'fitRows'
+    });
+
+    $('#portfolio-flters li').on('click', function() {
+        $("#portfolio-flters li").removeClass('active');
+        $(this).addClass('active');
+        
+        portfolioIsotope.isotope({ filter: $(this).data('filter') });
+    });
+});
+
+
+
 autoPlay();
 
 carousel.addEventListener("mousedown", dragStart);

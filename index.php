@@ -1,5 +1,10 @@
 <?php include 'header.php'; ?>
 
+<style>
+.portfolio-item{
+position: inherit;
+}
+</style>
 <!-- Carousel Start -->
 <div class="container-fluid p-0 wow fadeIn" data-wow-delay="0.1s" id="idk">
     <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
@@ -309,150 +314,127 @@
 <!-- Service End -->
 
 
-
-
-<!-- Projects Start -->
-<div class="container-xxl py-5" id="productsTp">
-    <div class="container">
-        <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-            <p class="fs-5 fw-bold text-primary">Our Products</p>
-            <h1 class="display-5 mb-5">Some of our amazing products</h1>
-        </div>
-        <div class="row wow fadeInUp" data-wow-delay="0.3s">
-            <div class="col-12 text-center">
-                <ul class="list-inline rounded mb-5" id="portfolio-flters">
-                    <li class="mx-2 active" data-filter="*">All</li>
-                    <li class="mx-2" data-filter=".first">Dry Moss</li>
-                    <li class="mx-2" data-filter=".second">Live Moss</li>
-                </ul>
-            </div>
-        </div>
-        <div class="row g-4 portfolio-container">
-            <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
-                <div class="portfolio-inner rounded">
-                    <img class="img-fluid" src="img/service-1.webp" alt="" loading="lazy">
-                    <div class="portfolio-text">
-                        <h4 class="text-white mb-4">Look this quality</h4>
-                        <div class="d-flex">
-                            <a class="btn btn-lg-square rounded-circle mx-2" href="img/service-1.webp" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.3s">
-                <div class="portfolio-inner rounded">
-                    <img class="img-fluid" src="img/service-2.webp" alt="" loading="lazy">
-                    <div class="portfolio-text">
-                        <h4 class="text-white mb-4">Pure green elegance</h4>
-                        <div class="d-flex">
-                            <a class="btn btn-lg-square rounded-circle mx-2" href="img/service-2.webp" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.5s">
-                <div class="portfolio-inner rounded">
-                    <img class="img-fluid" src="img/service-3.webp" alt="" loading="lazy">
-                    <div class="portfolio-text">
-                        <h4 class="text-white mb-4">Simply breathtaking</h4>
-                        <div class="d-flex">
-                            <a class="btn btn-lg-square rounded-circle mx-2" href="img/service-3.webp" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.1s">
-                <div class="portfolio-inner rounded">
-                    <img class="img-fluid" src="img/service-4.webp" alt="" loading="lazy">
-                    <div class="portfolio-text">
-                        <h4 class="text-white mb-4">A masterpiece of nature</h4>
-                        <div class="d-flex">
-                            <a class="btn btn-lg-square rounded-circle mx-2" href="img/service-4.webp" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.3s">
-                <div class="portfolio-inner rounded">
-                    <img class="img-fluid" src="img/service-5.webp" alt="" loading="lazy">
-                    <div class="portfolio-text">
-                        <h4 class="text-white mb-4">Living art in green</h4>
-                        <div class="d-flex">
-                            <a class="btn btn-lg-square rounded-circle mx-2" href="img/service-5.webp" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.5s">
-                <div class="portfolio-inner rounded">
-                    <img class="img-fluid" src="img/service-6.webp" alt="" loading="lazy">
-                    <div class="portfolio-text">
-                        <h4 class="text-white mb-4">Unmatched natural beauty</h4>
-                        <div class="d-flex">
-                            <a class="btn btn-lg-square rounded-circle mx-2" href="img/service-6.webp" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<!-- Projects Start --> 
+<div class="container-xxl py-5"> 
+	<div class="container">
+		<div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s"
+		style="max-width: 500px;">
+			<p class="fs-5 fw-bold text-primary">Our Products</p>
+			<h1 class="display-5 mb-5">Some of our amazing products</h1> 
+		</div> 
+	<div class="row wow fadeInUp" data-wow-delay="0.3s"> 
+		<div class="col-12 text-center">
+			<ul class="list-inline rounded mb-5" id="portfolio-flters"> 
+				<li class="mx-2 active" data-filter="*">
+					All
+				</li> 
+				<li class="mx-2" data-filter=".first">
+					Dry Moss
+				</li> 
+				<li class="mx-2" data-filter=".second">
+					Live Moss
+				</li> 
+			</ul> 
+		</div>
+	</div> 
+	<div id="ct-productos-25" style="height: fit-content !important;" class="row g-4 "> 
+		<div style="position: relative !important;" class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" 
+		data-wow-delay="0.1s"> 
+			<div class="portfolio-inner rounded"> 
+				<img class="img-fluid" src="img/service-1.webp" alt="" 
+				loading="lazy"> 
+				<div class="portfolio-text"> 
+					<div class="d-flex"> 
+						<a class="btn btn-lg-square rounded-circle mx-2" 
+						href="img/service-1.webp" data-lightbox="portfolio">
+							<i class="fa fa-eye"></i>
+						</a> 
+					</div> 
+				</div> 
+			</div> 
+		</div> 
+		<div style="position: relative !important;" class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" 
+		data-wow-delay="0.3s"> 
+			<div class="portfolio-inner rounded"> 
+				<img class="img-fluid" src="img/service-2.webp" alt="" 
+				loading="lazy"> 
+				<div class="portfolio-text"> 
+					<div class="d-flex"> 
+						<a class="btn btn-lg-square rounded-circle mx-2" 
+						href="img/service-2.webp" data-lightbox="portfolio">
+							<i class="fa fa-eye"></i>
+						</a>
+					</div> 
+				</div> 
+			 </div> 
+		</div> 
+		<div style="position: relative !important;" class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" 
+		data-wow-delay="0.5s"> 
+			<div class="portfolio-inner rounded"> 
+				<img class="img-fluid" src="img/service-3.webp"
+				alt="" loading="lazy"> 
+				<div class="portfolio-text"> 
+					<div class="d-flex"> 
+						<a class="btn btn-lg-square rounded-circle mx-2" 
+						href="img/service-3.webp" data-lightbox="portfolio">
+							<i class="fa fa-eye"></i>
+						</a> 
+					</div> 
+				</div> 
+			</div> 
+		</div>
+		<div style="position:relative  !important;" class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" 
+		data-wow-delay="0.1s"> 
+			<div class="portfolio-inner rounded"> 
+				<img class="img-fluid" src="img/service-4.webp" alt="" 
+				loading="lazy"> 
+				<div class="portfolio-text"> 
+						<div class="d-flex"> 
+							<a class="btn btn-lg-square rounded-circle mx-2" 
+							href="img/service-4.webp" data-lightbox="portfolio">
+								<i class="fa fa-eye"></i>
+							</a> 
+						</div> 
+					</div> 
+				</div>
+			</div>
+ 			<div style="position: relative !important;" class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp"
+			data-wow-delay="0.3s"> 
+				<div class="portfolio-inner rounded"> 
+					<img class="img-fluid" src="img/service-5.webp" alt="" 
+					loading="lazy"> 
+					<div class="portfolio-text"> 
+						<div class="d-flex"> 
+							<a class="btn btn-lg-square rounded-circle mx-2"
+							href="img/service-5.webp" data-lightbox="portfolio">
+								<i class="fa fa-eye"></i>
+							</a> 
+						</div> 
+					</div> 
+				</div> 
+			</div>
+			<div style="position: inherit !important;" class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" 
+			data-wow-delay="0.5s"> 
+				<div class="portfolio-inner rounded"> 
+					<img class="img-fluid" src="img/service-6.webp"
+					alt="" loading="lazy"> 
+					<div class="portfolio-text"> 
+						<div class="d-flex"> 
+							<a class="btn btn-lg-square rounded-circle mx-2" 
+							href="img/service-6.webp" data-lightbox="portfolio">
+								<i class="fa fa-eye"></i>
+							</a> 
+						</div> 
+					</div> 
+				</div>
+			</div>
+		</div> 
+	</div> 
+</div> 
 <!-- Projects End -->
 
 
-<!-- Quote Start -->
-<div class="container-fluid quote my-5 py-5" data-parallax="scroll" data-image-src="img/carousel-2.webp" style="margin-top: 400px !important" id="contactTp">
-    <div class="container py-5">
-        <div class="row justify-content-center">
-            <div class="col-lg-7">
-                <div class="bg-white rounded p-4 p-sm-5 wow fadeIn" data-wow-delay="0.5s">
-                    <h1 class="display-5 text-center mb-5">Get A Free Quote</h1>
-                    <div class="row g-3">
-                        <div class="col-sm-6">
-                            <div class="form-floating">
-                                <input type="text" class="form-control bg-light border-0" id="gname" placeholder="Gurdian Name">
-                                <label for="gname">Your Name</label>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-floating">
-                                <input type="email" class="form-control bg-light border-0" id="gmail" placeholder="Gurdian Email">
-                                <label for="gmail">Your Email</label>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-floating">
-                                <input type="text" class="form-control bg-light border-0" id="cname" placeholder="Child Name">
-                                <label for="cname">Your Mobile</label>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-floating">
-                                <input type="text" class="form-control bg-light border-0" id="cage" placeholder="Child Age">
-                                <label for="cage">Service Type</label>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="form-floating">
-                                <textarea class="form-control bg-light border-0" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
-                                <label for="message">Message</label>
-                            </div>
-                        </div>
-                        <div class="col-12 text-center">
-                            <button class="btn btn-primary py-3 px-4" type="submit">Submit Now</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Quote End -->
+
+
 
 <?php include 'footer.php'; ?>
