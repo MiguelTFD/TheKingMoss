@@ -23,7 +23,9 @@ if(isset($_POST['cantidad'])){
 
 $preTot = $can * $producto->descuento(50);
 ?>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
    <script 
    src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js">
    </script>
@@ -68,6 +70,17 @@ $preTot = $can * $producto->descuento(50);
 .ticket-system > h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6
 {
    color:black !important;
+}
+#download{
+font-size:1.8em;
+padding:10px;
+background: var(--primary);
+color: white;
+border-radius:15px;
+}
+#download:hover{
+background: #929302;
+
 }
 </style>
 
@@ -395,6 +408,8 @@ function prevStep() {
    showStep(currentStep);
 }
 
+
+
 function confirmOrder() {
    document.getElementById('confirmation-message').style.display = 'block';
 }
@@ -427,7 +442,7 @@ confetti();
          <div class="printer" />
          </div>
          <div class="receipts-wrapper">
-            <div class="receipts">
+            <div id="contenido" class="receipts">
                <div class="receipt">
                   <div class="route">
                      <div class="item">
@@ -493,6 +508,7 @@ confetti();
                </div>
             </div>
          </div>
+        <a id="download">Descargar Ticket</a>
       </main>
    `;
     console.log(document.getElementById('inputOtherAgencia').value)
@@ -501,6 +517,8 @@ confetti();
    currentStep++;
    showStep(currentStep);
    randomWord();
+    holis();
+
    if (paymentMethod === "yape") {
     document.querySelector('.description').style.display = "block";
    } else if (paymentMethod === "plin") {
@@ -555,6 +573,8 @@ function toggleOtherField() {
 }
 
 
+
+
 function validateAndNextStep(event) {
       event.preventDefault();
       const form = document.getElementById('client-form');
@@ -566,9 +586,32 @@ function validateAndNextStep(event) {
       return false;
    }
 
+    //Descargar Ticket
+    function holis(){    
+        document.getElementById("download").addEventListener("click", function() {
+        let element = document.getElementById("contenido");
+
+        html2canvas(element, {
+          useCORS: true, // Si hay imágenes externas, habilitar CORS
+          scrollY: 0     // Asegurarse de que capture todo el contenido
+        }).then(function(canvas) {
+          var imageData = canvas.toDataURL("image/jpeg");
+
+          var link = document.createElement('a');
+          link.href = imageData;
+          link.download = 'ticket.jpg'; // Nombre del archivo de imagen
+          link.click(); // Iniciamos la descarga
+        });
+        });
+    }
+
+
 //Llamadas
 showStep(currentStep);
 randomWord();
 </script>
+<script>
+</script>
+
 
 <?php include 'footer.php';?>
