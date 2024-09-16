@@ -189,6 +189,44 @@ text-align: center;width:fit-content;padding:20px 0" id="timer">
          </div>
       </div>
       <div class="row">
+         <div class="col-md-4">
+            <div class="mb-3">
+               <label for="inputDepartment" class="form-label">Departamento</label>
+               <input type="text" name="department" class="form-control"
+               id="inputDepartment"
+               placeholder="Lima..."
+               pattern="[a-zA-Z]+"
+               title="Departamento Invalido"
+               required
+               >
+            </div>
+         </div>
+         <div class="col-md-4">
+           <div class="mb-3">
+               <label for="inputProvince" class="form-label">Provincia</label>
+               <input type="text" name="province" class="form-control"
+               id="inputProvince"
+               placeholder="Lima..."
+               pattern="[a-zA-Z]+"
+               title="Provincia invalida"
+               required
+               >
+           </div>
+         </div>
+         <div class="col-md-4">
+           <div class="mb-3">
+               <label for="inputDistrict" class="form-label">Distrito</label>
+               <input type="text" name="district" class="form-control"
+               id="inputDistrict"
+               placeholder="Ate..."
+               pattern="[a-zA-Z]+"
+               title="Distrito invalido"
+               required
+               >
+           </div>
+         </div>
+      </div>
+      <div class="row">
          <div class="col-md-6">
             <div class="mb-3">
                <label name="telefono"for="inputfono" class="form-label">Telefono</label>
@@ -209,7 +247,7 @@ text-align: center;width:fit-content;padding:20px 0" id="timer">
         <select id="selectAgencia" name="agencia" class="form-control" onchange="toggleOtherField()" required>
             <option value="" selected>Seleccione...</option>
             <option value="shalom">Shalom</option>
-            <option value="${otherAValue}">Otro</option>
+            <option value="otro">Otro</option>
         </select>
     </div>
 </div> 
@@ -256,44 +294,6 @@ text-align: center;width:fit-content;padding:20px 0" id="timer">
          title="La dirección solo puede contener letras, números, puntos y espacios"
          >
       </div>
-      <div class="row">
-         <div class="col-md-4">
-            <div class="mb-3">
-               <label for="inputDepartment" class="form-label">Departamento</label>
-               <input type="text" name="department" class="form-control"
-               id="inputDepartment"
-               placeholder="Lima..."
-               pattern="[a-zA-Z]+"
-               title="Departamento Invalido"
-               required
-               >
-            </div>
-         </div>
-         <div class="col-md-4">
-           <div class="mb-3">
-               <label for="inputProvince" class="form-label">Provincia</label>
-               <input type="text" name="province" class="form-control"
-               id="inputProvince"
-               placeholder="Lima..."
-               pattern="[a-zA-Z]+"
-               title="Provincia invalida"
-               required
-               >
-           </div>
-         </div>
-         <div class="col-md-4">
-           <div class="mb-3">
-               <label for="inputDistrict" class="form-label">Distrito</label>
-               <input type="text" name="district" class="form-control"
-               id="inputDistrict"
-               placeholder="Ate..."
-               pattern="[a-zA-Z]+"
-               title="Distrito invalido"
-               required
-               >
-           </div>
-         </div>
-      </div>
       <div class="step-buttons">
          <button class="btn btn-secondary" 
          type="button" 
@@ -338,8 +338,7 @@ text-align: center;width:fit-content;padding:20px 0" id="timer">
 <script>
 //Variables
 let currentStep = 1;
-
-let otherAValue= document.getElementById("inputOtherAgencia").value;
+let agenciaElegida='';
 
 //Funciones
 
@@ -399,11 +398,18 @@ function prevStep() {
 function confirmOrder() {
    document.getElementById('confirmation-message').style.display = 'block';
 }
-
 function submitOrder() {
    const paymentMethod = document.querySelector('input[name="payment"]:checked').value;
    const clientForm = document.getElementById('client-form');
+var select = document.getElementById('selectAgencia').value;
+var otherField = document.getElementById('otherAgenciaField');  
+var agenciaAlterna = document.getElementById('inputOtherAgencia').value;
 
+if(select == 'otro'){
+   agenciaElegida = agenciaAlterna; 
+}else{
+agenciaElegida = 'Shalom';
+}
    let qrPay = "";
 if (paymentMethod === "yape") {
    qrPay = "img/yape-qr.png";
@@ -449,6 +455,10 @@ confetti();
                         <h3>${clientForm.dni.value}</h3>
                      </div>
                      <div class="item">
+                        <span>Telefono</span>
+                        <h3>${clientForm.telefono.value}</h3>
+                     </div>
+                     <div class="item">
                      <span>Direccion</span>
                      <h3>
                         ${clientForm.department.value}/
@@ -458,7 +468,7 @@ confetti();
                      <h6>${clientForm.address.value}</h6>
                      <h6>${clientForm.address2.value}</h6>
                     <span> Agencia</span>
-                    <h5>${clientForm.agencia.value} </h5>
+                    <h5>${agenciaElegida} </h5>
                     <h6>${clientForm.dirAgencia.value}</h6>
                      </div>
                      <div class="item">
@@ -485,6 +495,8 @@ confetti();
          </div>
       </main>
    `;
+    console.log(document.getElementById('inputOtherAgencia').value)
+    console.log(agenciaElegida)
    document.getElementById('summary').innerHTML = summary;
    currentStep++;
    showStep(currentStep);
