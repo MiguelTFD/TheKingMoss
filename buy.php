@@ -437,7 +437,7 @@ confetti();
       <main class="ticket-system">
          <div class="top">
          <h1 class="title">
-            Envia una captura de este ticket junto con la constancia de tu pago.
+            Envia este ticket junto con la constancia de tu pago.
          </h1>
          <div class="printer" />
          </div>
