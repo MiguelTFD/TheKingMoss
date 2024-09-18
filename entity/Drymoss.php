@@ -1,7 +1,6 @@
 <?php
-include 'Producto.php';
+include_once 'Producto.php';
 
-session_start();
 
 $productos = [
    new Producto(
@@ -30,7 +29,7 @@ $productos = [
       "img/bp5k.webp"
    ),
 
-/*   new Producto(
+       new Producto(
       3,
       80,
       "Bloque fibra 2.5Kg",
@@ -42,8 +41,8 @@ $productos = [
       45,
       "img/bf2_5k.webp"
    ),
- 
-   new Producto(
+
+/*   new Producto(
       4,
       40,
       "Bloque picado 2.5Kg",

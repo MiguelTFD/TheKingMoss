@@ -1,19 +1,42 @@
 <?php include 'header.php';?>
 <?php
 include 'entity/Drymoss.php'; // Asegúrate de que contiene el array $productos
+include 'entity/Livemoss.php';
+
+$producto = null;
 
 if (isset($_POST['id'])) {
    $id = $_POST['id'];
-   $producto = null;
    foreach ($productos as $p) {
       if ($p->id == $id) {
          $producto = $p;
          break;
       }
    }
+
 } else {
    echo "ID de producto no especificado.";
 }
+
+if (isset($_POST['id'])) {
+   $id = $_POST['id'];
+   foreach ($livemoss as $p) {
+      if ($p->id == $id) {
+         $producto = $p;
+         break;
+      }
+   }
+
+} else {
+   echo "ID de producto no especificado.";
+}
+
+
+
+
+
+
+
 
 if(isset($_POST['cantidad'])){
    $can = $_POST['cantidad'];
@@ -128,6 +151,18 @@ text-align: center;width:fit-content;padding:20px 0" id="timer">
             <label>
                 <input type="radio" name="payment" value="plin" required> 
                 <img class="imgPayment" src="img/icon/Plin-logo.png">
+            </label>
+            <label>
+                <input type="radio" name="payment" value="BCP" required> 
+                <img class="imgPayment" src="img/bcp-logo.png">
+            </label>
+            <label>
+                <input type="radio" name="payment" value="BBVA" required> 
+                <img class="imgPayment" src="img/bbva-logo.png">
+            </label>
+            <label>
+                <input type="radio" name="payment" value="BancoDeLaNacion" required> 
+                <img class="imgPayment" src="img/bn-logo.png">
             </label>
          </div>
          <div class="step-buttons">
@@ -414,116 +449,154 @@ function confirmOrder() {
    document.getElementById('confirmation-message').style.display = 'block';
 }
 function submitOrder() {
-   const paymentMethod = document.querySelector('input[name="payment"]:checked').value;
+   let paymentMethod = document.querySelector('input[name="payment"]:checked').value;
    const clientForm = document.getElementById('client-form');
-var select = document.getElementById('selectAgencia').value;
-var otherField = document.getElementById('otherAgenciaField');  
-var agenciaAlterna = document.getElementById('inputOtherAgencia').value;
+    var select = document.getElementById('selectAgencia').value;
+    var otherField = document.getElementById('otherAgenciaField');  
+    var agenciaAlterna = document.getElementById('inputOtherAgencia').value;
+    
+    if(select == 'otro'){
+       agenciaElegida = agenciaAlterna; 
+    }else{
+    agenciaElegida = 'Shalom';
+    }
+    
+    let qrPay = "";
+    if (paymentMethod === "yape") {
+       qrPay = "img/yape-qr.png";
+    } else if (paymentMethod === "plin") {
+       qrPay = "img/plin-qr.png";
+    }else if (paymentMethod == "BancoDeLaNacion"){
+        paymentMethod="Banco de la Nación"
+    }
+    confetti();
+       const summary = `
+          <main class="ticket-system">
+             <div class="top">
+             <h1 class="title">
+                Envia este ticket junto con la constancia de tu pago.
+             </h1>
+             <div class="printer" />
+             </div>
+             <div class="receipts-wrapper">
+                <div id="contenido" class="receipts">
+                   <div class="receipt">
+                      <div class="route">
+                         <div class="item">
+                            <span>Producto</span>
+                            <h2><?=$producto->nombre?> X<?=$can?> </h2>
+                         </div>
+                      </div>
+                      <div class="route">
+                         <div class="item">
+                            <span>Metodo de pago</span>
+                            <h2>${paymentMethod}</h2>
+                         </div>
+                         <div class="item">
+                            <span>Total a Pagar</span>
+                            <h2>S/<?=$preTot?></h2>
+                         </div>
+                      </div>
+                      <div class="details">
+                         <div class="item">
+                            <span>Nombre</span>
+                            <h3>${clientForm.name.value} ${clientForm.lastname.value}</h3>
+                         </div>
+                         <div class="item">
+                            <span>DNI</span>
+                            <h3>${clientForm.dni.value}</h3>
+                         </div>
+                         <div class="item">
+                            <span>Telefono</span>
+                            <h3>${clientForm.telefono.value}</h3>
+                         </div>
+                         <div class="item">
+                         <span>Direccion</span>
+                         <h3>
+                            ${clientForm.department.value}/
+                            ${clientForm.province.value}/
+                            ${clientForm.district.value}
+                         </h3>
+                         <h6>${clientForm.address.value}</h6>
+                         <h6>${clientForm.address2.value}</h6>
+                        <span> Agencia</span>
+                        <h5>${agenciaElegida} </h5>
+                        <h6>${clientForm.dirAgencia.value}</h6>
+                         </div>
+                         <div class="item">
+                            <span>Email</span>
+                            <h4>${clientForm.email.value}</h4>
+                         </div>
+                      </div>
+                   </div>
+                   <div class="receipt qr-code">
+                   <div class="qr-dt-con">
+                      <p class="text-center" >Henry Obed Cholan Romero</p>
+                      <img class="qr" src="${qrPay}" alt="qrimg">
+                      <p class="text-center" >+51 983 929 015</p>
+                      </div>
+                      <div  class="description">
+                         <h4 class="text-center" id="randomWord">Cargando...</h4>
+                         <p class="text-center">
+                            Has la tranferencia 
+                            agregando este codigo como comentario
+                         </p>
+                      </div>
+                   </div>
+                </div>
+             </div>
+            <a id="download">Descargar Ticket</a>
+          </main>
+       `;
+        console.log(document.getElementById('inputOtherAgencia').value)
+        console.log(agenciaElegida)
+       document.getElementById('summary').innerHTML = summary;
+       currentStep++;
+       showStep(currentStep);
+       randomWord();
+        holis();
 
-if(select == 'otro'){
-   agenciaElegida = agenciaAlterna; 
-}else{
-agenciaElegida = 'Shalom';
-}
-   let qrPay = "";
-if (paymentMethod === "yape") {
-   qrPay = "img/yape-qr.png";
-} else if (paymentMethod === "plin") {
-   qrPay = "img/plin-qr.png";
-}
-confetti();
 
-   const summary = `
-      <main class="ticket-system">
-         <div class="top">
-         <h1 class="title">
-            Envia este ticket junto con la constancia de tu pago.
-         </h1>
-         <div class="printer" />
-         </div>
-         <div class="receipts-wrapper">
-            <div id="contenido" class="receipts">
-               <div class="receipt">
-                  <div class="route">
-                     <div class="item">
-                        <span>Producto</span>
-                        <h2><?=$producto->nombre?> X<?=$can?> </h2>
-                     </div>
-                  </div>
-                  <div class="route">
-                     <div class="item">
-                        <span>Metodo de pago</span>
-                        <h2>${paymentMethod}</h2>
-                     </div>
-                     <div class="item">
-                        <span>Total a Pagar</span>
-                        <h2>S/<?=$preTot?></h2>
-                     </div>
-                  </div>
-                  <div class="details">
-                     <div class="item">
-                        <span>Nombre</span>
-                        <h3>${clientForm.name.value} ${clientForm.lastname.value}</h3>
-                     </div>
-                     <div class="item">
-                        <span>DNI</span>
-                        <h3>${clientForm.dni.value}</h3>
-                     </div>
-                     <div class="item">
-                        <span>Telefono</span>
-                        <h3>${clientForm.telefono.value}</h3>
-                     </div>
-                     <div class="item">
-                     <span>Direccion</span>
-                     <h3>
-                        ${clientForm.department.value}/
-                        ${clientForm.province.value}/
-                        ${clientForm.district.value}
-                     </h3>
-                     <h6>${clientForm.address.value}</h6>
-                     <h6>${clientForm.address2.value}</h6>
-                    <span> Agencia</span>
-                    <h5>${agenciaElegida} </h5>
-                    <h6>${clientForm.dirAgencia.value}</h6>
-                     </div>
-                     <div class="item">
-                        <span>Email</span>
-                        <h4>${clientForm.email.value}</h4>
-                     </div>
-                  </div>
-               </div>
-               <div class="receipt qr-code">
-               <div class="qr-dt-con">
-                  <p class="text-center" >Henry Obed Cholan Romero</p>
-                  <img class="qr" src="${qrPay}" alt="qrimg">
-                  <p class="text-center" >+51 983 929 015</p>
-                  </div>
-                  <div  class="description">
-                     <h4 class="text-center" id="randomWord">Cargando...</h4>
-                     <p class="text-center">
-                        Has la tranferencia 
-                        agregando este codigo como comentario
-                     </p>
-                  </div>
-               </div>
-            </div>
-         </div>
-        <a id="download">Descargar Ticket</a>
-      </main>
-   `;
-    console.log(document.getElementById('inputOtherAgencia').value)
-    console.log(agenciaElegida)
-   document.getElementById('summary').innerHTML = summary;
-   currentStep++;
-   showStep(currentStep);
-   randomWord();
-    holis();
+const xdBCP =`
+            <strong>Número de cuenta BCP Soles</strong>
+            <h4 class="text-center" id="pyTitle">19132941359098</h4>
+            <h6 class="text-center">Henry Obed Cholan Romero </h6>
+            <p class="text-center mdk">
+                ¡SOLO TRANSFERENCIA DIGITAL!
+            </p>
+`; 
+const xdBBVA =`
+            <strong>Número de cuenta BBVA Soles</strong>
+            <h4 class="text-center" id="pyTitle">0011-0628-0200241090</h4>
+            <h6 class="text-center">Henry Obed Cholan Romero </h6>
+            <p class="text-center mdk">
+                ¡SOLO TRANSFERENCIA DIGITAL!
+            </p>
+`; 
+const xdBn=`
+            <strong>Cuenta de ahorros en Soles Banco de la Nación</strong>
+            <h4 class="text-center" id="pyTitle">04-487-189109</h4>
+            <h6 class="text-center">Henry Obed Cholan Romero </h6>
+            <p class="text-center mdk">
+                Deposito en agente
+            </p>
+`; 
 
-   if (paymentMethod === "yape") {
-    document.querySelector('.description').style.display = "block";
-   } else if (paymentMethod === "plin") {
- document.querySelector('.description').style.display = "none";
-}
+    if (paymentMethod === "yape") {
+        document.querySelector('.description').style.display = "block";
+    } else if (paymentMethod === "plin") {
+        document.querySelector('.description').style.display = "none";
+    }else if(paymentMethod === "BCP"){
+        document.querySelector('.qr-dt-con').style.display = "none";
+        document.querySelector('.description').innerHTML=xdBCP;
+    }else if(paymentMethod === "BBVA"){
+        document.querySelector('.qr-dt-con').style.display = "none";
+        document.querySelector('.description').innerHTML=xdBBVA;
+    }else{ 
+        document.querySelector('.qr-dt-con').style.display = "none";
+        document.querySelector('.description').innerHTML=xdBn;
+    }
+
 }
 
 //validar documentos

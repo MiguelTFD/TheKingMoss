@@ -1,10 +1,11 @@
-<?php include 'header.php'; ?>
+<?php include_once 'header.php'; ?>
 
 <style>
-.portfolio-item{
-position: inherit;
-}
+    .portfolio-item{
+        position: inherit;
+    }
 </style>
+
 <!-- Carousel Start -->
 <div class="container-fluid p-0 wow fadeIn" data-wow-delay="0.1s" id="idk">
     <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
@@ -20,7 +21,7 @@ position: inherit;
                         </div>
                     </div>
                 </div>
-				</div>
+            </div>
             <div class="carousel-item">
                 <img class="w-100" src="img/carousel-2.webp" alt="Image" loading="lazy" >
                 <div class="carousel-caption">
@@ -39,8 +40,7 @@ position: inherit;
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
-                data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
@@ -109,7 +109,11 @@ position: inherit;
                 <h1 class="display-1 text-primary mb-0">No. 1</h1>
                 <p class="text-primary mb-4">National Moss Suppliers</p>
                 <h1 class="display-5 mb-4">From the Andes to Your Doorstep</h1>
-                <p class="mb-4">To ensure minimal environmental impact and natural regrowth, we sustainably hand-pick the finest moss from the Peruvian Andes.</p>
+                <p class="mb-4">
+                    To ensure minimal environmental impact and 
+                    natural regrowth, we sustainably hand-pick 
+                    the finest moss from the Peruvian Andes.
+                </p>
             </div>
             <div class="col-lg-3 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="row g-5">
@@ -168,7 +172,6 @@ position: inherit;
                     the unique beauty of the Peruvian Andes with the world while maintaining
                     a commitment to sustainability and excellence.
                 </p>
-
             </div>
             <div class="col-lg-6">
                 <div class="row g-4 align-items-center">
@@ -229,7 +232,6 @@ position: inherit;
                         </div>
                         <h4 class="mb-3">Personalized Moss Consultation</h4>
                         <p class="mb-4">Expert advice to help you choose the best moss for your needs.</p>
-
                     </div>
                 </div>
             </div>
@@ -244,7 +246,6 @@ position: inherit;
                         </div>
                         <h4 class="mb-3">Nationwide Shipping</h4>
                         <p class="mb-4">Reliable delivery across the country, ensuring your moss arrives fresh and in perfect condition.</p>
-
                     </div>
                 </div>
             </div>
@@ -259,7 +260,6 @@ position: inherit;
                         </div>
                         <h4 class="mb-3">International Export Services</h4>
                         <p class="mb-4">Efficient and secure shipping for international customers.</p>
-
                     </div>
                 </div>
             </div>
@@ -274,7 +274,6 @@ position: inherit;
                         </div>
                         <h4 class="mb-3">Custom Moss Arrangements </h4>
                         <p class="mb-4">Tailored moss designs for unique decorative needs.</p>
-
                     </div>
                 </div>
             </div>
@@ -289,7 +288,6 @@ position: inherit;
                         </div>
                         <h4 class="mb-3">Moss Care and Maintenance Guidance</h4>
                         <p class="mb-4">Tips and instructions to keep your moss looking its best.</p>
-
                     </div>
                 </div>
             </div>
@@ -304,7 +302,6 @@ position: inherit;
                         </div>
                         <h4 class="mb-3">Exclusive Moss Varieties</h4>
                         <p class="mb-4">Access to rare and unique moss species that aren’t available elsewhere.</p>
-
                     </div>
                 </div>
             </div>
@@ -313,128 +310,4 @@ position: inherit;
 </div>
 <!-- Service End -->
 
-
-<!-- Projects Start --> 
-<div class="container-xxl py-5"> 
-	<div class="container">
-		<div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s"
-		style="max-width: 500px;">
-			<p class="fs-5 fw-bold text-primary">Our Products</p>
-			<h1 class="display-5 mb-5">Some of our amazing products</h1> 
-		</div> 
-	<div class="row wow fadeInUp" data-wow-delay="0.3s"> 
-		<div class="col-12 text-center">
-			<ul class="list-inline rounded mb-5" id="portfolio-flters"> 
-				<li class="mx-2 active" data-filter="*">
-					All
-				</li> 
-				<li class="mx-2" data-filter=".first">
-					Dry Moss
-				</li> 
-				<li class="mx-2" data-filter=".second">
-					Live Moss
-				</li> 
-			</ul> 
-		</div>
-	</div> 
-	<div id="ct-productos-25" style="height: fit-content !important;" class="row g-4 "> 
-		<div style="position: relative !important;" class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" 
-		data-wow-delay="0.1s"> 
-			<div class="portfolio-inner rounded"> 
-				<img class="img-fluid" src="img/service-1.webp" alt="" 
-				loading="lazy"> 
-				<div class="portfolio-text"> 
-					<div class="d-flex"> 
-						<a class="btn btn-lg-square rounded-circle mx-2" 
-						href="img/service-1.webp" data-lightbox="portfolio">
-							<i class="fa fa-eye"></i>
-						</a> 
-					</div> 
-				</div> 
-			</div> 
-		</div> 
-		<div style="position: relative !important;" class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" 
-		data-wow-delay="0.3s"> 
-			<div class="portfolio-inner rounded"> 
-				<img class="img-fluid" src="img/service-2.webp" alt="" 
-				loading="lazy"> 
-				<div class="portfolio-text"> 
-					<div class="d-flex"> 
-						<a class="btn btn-lg-square rounded-circle mx-2" 
-						href="img/service-2.webp" data-lightbox="portfolio">
-							<i class="fa fa-eye"></i>
-						</a>
-					</div> 
-				</div> 
-			 </div> 
-		</div> 
-		<div style="position: relative !important;" class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" 
-		data-wow-delay="0.5s"> 
-			<div class="portfolio-inner rounded"> 
-				<img class="img-fluid" src="img/service-3.webp"
-				alt="" loading="lazy"> 
-				<div class="portfolio-text"> 
-					<div class="d-flex"> 
-						<a class="btn btn-lg-square rounded-circle mx-2" 
-						href="img/service-3.webp" data-lightbox="portfolio">
-							<i class="fa fa-eye"></i>
-						</a> 
-					</div> 
-				</div> 
-			</div> 
-		</div>
-		<div style="position:relative  !important;" class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" 
-		data-wow-delay="0.1s"> 
-			<div class="portfolio-inner rounded"> 
-				<img class="img-fluid" src="img/service-4.webp" alt="" 
-				loading="lazy"> 
-				<div class="portfolio-text"> 
-						<div class="d-flex"> 
-							<a class="btn btn-lg-square rounded-circle mx-2" 
-							href="img/service-4.webp" data-lightbox="portfolio">
-								<i class="fa fa-eye"></i>
-							</a> 
-						</div> 
-					</div> 
-				</div>
-			</div>
- 			<div style="position: relative !important;" class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp"
-			data-wow-delay="0.3s"> 
-				<div class="portfolio-inner rounded"> 
-					<img class="img-fluid" src="img/service-5.webp" alt="" 
-					loading="lazy"> 
-					<div class="portfolio-text"> 
-						<div class="d-flex"> 
-							<a class="btn btn-lg-square rounded-circle mx-2"
-							href="img/service-5.webp" data-lightbox="portfolio">
-								<i class="fa fa-eye"></i>
-							</a> 
-						</div> 
-					</div> 
-				</div> 
-			</div>
-			<div style="position: inherit !important;" class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" 
-			data-wow-delay="0.5s"> 
-				<div class="portfolio-inner rounded"> 
-					<img class="img-fluid" src="img/service-6.webp"
-					alt="" loading="lazy"> 
-					<div class="portfolio-text"> 
-						<div class="d-flex"> 
-							<a class="btn btn-lg-square rounded-circle mx-2" 
-							href="img/service-6.webp" data-lightbox="portfolio">
-								<i class="fa fa-eye"></i>
-							</a> 
-						</div> 
-					</div> 
-				</div>
-			</div>
-		</div> 
-	</div> 
-</div> 
-<!-- Projects End -->
-
-
-
-
-
-<?php include 'footer.php'; ?>
+<?php include_once 'footer.php'; ?>

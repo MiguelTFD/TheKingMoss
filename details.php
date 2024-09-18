@@ -1,11 +1,13 @@
 <?php include 'header.php';?>
 <?php
 include 'entity/Drymoss.php'; // Asegúrate de que contiene el array $productos
+include_once 'entity/Livemoss.php';
+
+
+$producto = null;
 
 if (isset($_POST['id'])) {
    $id = $_POST['id'];
-
-   $producto = null;
    foreach ($productos as $p) {
       if ($p->id == $id) {
          $producto = $p;
@@ -13,14 +15,25 @@ if (isset($_POST['id'])) {
       }
    }
 
-   if ($producto) {
-      echo ".";
-   } else {
-      echo "Producto no encontrado.";
-   }
 } else {
    echo "ID de producto no especificado.";
 }
+
+if (isset($_POST['id'])) {
+   $id = $_POST['id'];
+   foreach ($livemoss as $p) {
+      if ($p->id == $id) {
+         $producto = $p;
+         break;
+      }
+   }
+
+} else {
+   echo "ID de producto no especificado.";
+}
+
+
+
 ?>
 <style>
 #cn-img{

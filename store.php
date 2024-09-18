@@ -2,12 +2,21 @@
 session_start();
 include 'header.php'; 
 include 'entity/Drymoss.php';
+include_once 'entity/Livemoss.php';
+
 
 if (isset($_SESSION['productos'])) {
     $productos = $_SESSION['productos'];
 } else {
    echo "No hay productos disponibles.";
    $productos = [];
+  exit; 
+}
+if (isset($_SESSION['livemoss'])) {
+    $livemoss= $_SESSION['livemoss'];
+} else {
+   echo "No hay productos disponibles.";
+   $livemoss= [];
   exit; 
 }
 ?>
@@ -129,9 +138,46 @@ filter: saturate(0.8);
         <?php endforeach; ?>
     </div>
 </div>
-
-
 <!-- Service End -->
+
+<!-- Live Moss-->
+<div class="container-xxl py-5">
+
+    <h2 style="text-align: right;">Live Moss</h2>
+    <div class="grid-container">
+        
+        <?php foreach ($livemoss as $live): ?>
+        <div class="card">
+
+            <img class="shop-sales" src="img/sale.png">
+            <div class="img">
+                <img
+                    src="<?= htmlspecialchars($live->URL_IMG); ?>"
+                    alt="img" draggable="false"
+                >
+            </div>
+            <h2><?= htmlspecialchars($live->nombre); ?></h2>
+            <div id="cpp" class="d-flex align-items-center gap-3 m-1">
+                <p style="font-size:1.3em;color:gray;text-decoration: line-through;">
+                    S/<?= htmlspecialchars($live->precio) ?>
+                </p>
+                <p style="font-size:1.8em;color:#BD0000;font-weight: bold;">
+                    S/<?= htmlspecialchars($live->descuento(50)) ?>
+                </p>
+            </div>
+            <div class="dv-btn-ps">
+                <form action="details.php" method="post">
+                    <input type="hidden" name="id" value="<?= $live->id; ?>">
+                    <button type="submit" class="btn btn-primary btn-ps-cp">
+                        Ver más
+                    </button>
+                </form>
+            </div>
+        </div>
+        <?php endforeach; ?>
+    </div>
+</div>
+
 
 
 <?php include 'footer.php'; ?>
