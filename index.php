@@ -16,7 +16,7 @@
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
-                                <h1 class="display-1 text-white mb-5 animated slideInDown">Get the best quality at the best prices</h1>
+                                <h1 class="display-1 text-white mb-5 animated slideInDown">Obten la mejor calidad al mejor precio</h1>
                             </div>
                         </div>
                     </div>
@@ -28,7 +28,9 @@
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-7">
-                                <h1 class="display-1 text-white mb-5 animated slideInDown">Discover the quality and variety of the mosses we offer.</h1>
+                                <h1 class="display-1 text-white mb-5 animated slideInDown">
+                                    Descubre nuestra calidad y variedad de musgos que tenemos para ti 
+                                </h1>
                             </div>
                         </div>
                     </div>
@@ -60,8 +62,8 @@
                             <i class="fa fa-dollar-sign text-primary"></i>
                         </div>
                         <div class="ps-3">
-                            <h4>Competitive Pricing</h4>
-                            <span>Our prices set us apart in the market</span>
+                            <h4>Precios Competitivos</h4>
+                            <span>Nuestros precios nos diferencian del resto</span>
                         </div>
                     </div>
                 </div>
@@ -73,8 +75,8 @@
                             <i class="fa fa-users text-primary"></i>
                         </div>
                         <div class="ps-3">
-                            <h4>Dedicated Team</h4>
-                            <span>We have a competent, committed and professional team.</span>
+                            <h4>Equipo Comprometido</h4>
+                            <span>Contamos con un equipo dedicado, profesional y comprometido con nuestros clientes</span>
                         </div>
                     </div>
                 </div>
@@ -86,8 +88,8 @@
                             <i class="fa fa-phone text-primary"></i>
                         </div>
                         <div class="ps-3">
-                            <h4>24/7 Customer Care</h4>
-                            <span>We solve your doubts instantly</span>
+                            <h4>Atencion al cliente 24/7</h4>
+                            <span>Resolvemos tus dudas al instante</span>
                         </div>
                     </div>
                 </div>
@@ -107,8 +109,8 @@
             </div>
             <div class="col-lg-6 col-md-7 wow fadeInUp" data-wow-delay="0.3s">
                 <h1 class="display-1 text-primary mb-0">No. 1</h1>
-                <p class="text-primary mb-4">National Moss Suppliers</p>
-                <h1 class="display-5 mb-4">From the Andes to Your Doorstep</h1>
+                <p class="text-primary mb-4">Siendo los proveedores a nivel nacional</p>
+                <h1 class="display-5 mb-4">De los andes a tu puerta</h1>
                 <p class="mb-4">
                     To ensure minimal environmental impact and 
                     natural regrowth, we sustainably hand-pick 
