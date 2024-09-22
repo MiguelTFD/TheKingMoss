@@ -25,12 +25,12 @@ if (isset($_SESSION['livemoss'])) {
 <!-- Page Header Start -->
 <div class="container-fluid page-header page-service py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
     <div class="container text-center py-5">
-        <h1 class="display-3 text-white mb-4 animated slideInDown">Store</h1>
+        <h1 class="display-3 text-white mb-4 animated slideInDown">Tienda</h1>
         <nav aria-label="breadcrumb animated slideInDown">
             <ol class="breadcrumb justify-content-center mb-0">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Store</li>
+                <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+                <li class="breadcrumb-item"><a href="#">Páginas</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Tienda</li>
             </ol>
         </nav>
     </div>
@@ -99,12 +99,12 @@ filter: saturate(0.8);
    <span style="color:#929302;font-size:40px" class="material-symbols-outlined">
       storefront
    </span>
-<h1 style="width: fit-content;margin:0">Store</h1>
+<h1 style="width: fit-content;margin:0">Tienda</h1>
 </div>
 <!-- Dry Moss Sizes -->
 <div class="container-xxl py-5">
 
-    <h2 style="text-align: left;">Dry Moss</h2>
+    <h2 style="text-align: left;">Musgo Deshidratado</h2>
     <div class="grid-container">
         
         <?php foreach ($productos as $producto): ?>
@@ -123,7 +123,7 @@ filter: saturate(0.8);
                     S/<?= htmlspecialchars($producto->precio) ?>
                 </p>
                 <p style="font-size:1.8em;color:#BD0000;font-weight: bold;">
-                    S/<?= htmlspecialchars($producto->descuento(50)) ?>
+                    S/<?= htmlspecialchars($producto->descuento()) ?>
                 </p>
             </div>
             <div class="dv-btn-ps">
@@ -143,7 +143,7 @@ filter: saturate(0.8);
 <!-- Live Moss-->
 <div class="container-xxl py-5">
 
-    <h2 style="text-align: right;">Live Moss</h2>
+    <h2 style="text-align: right;">Musgo Vivo</h2>
     <div class="grid-container">
         
         <?php foreach ($livemoss as $live): ?>
@@ -162,7 +162,7 @@ filter: saturate(0.8);
                     S/<?= htmlspecialchars($live->precio) ?>
                 </p>
                 <p style="font-size:1.8em;color:#BD0000;font-weight: bold;">
-                    S/<?= htmlspecialchars($live->descuento(50)) ?>
+                    S/<?= htmlspecialchars($live->descuento()) ?>
                 </p>
             </div>
             <div class="dv-btn-ps">

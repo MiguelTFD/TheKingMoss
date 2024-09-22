@@ -5,17 +5,16 @@
     <div class="container py-5">
         <div class="row g-5">
             <div class="col-lg-6 col-md-6">
-                <h4 class="text-white mb-4">Our Office</h4>
+                <h4 class="text-white mb-4">Nuestra Oficina</h4>
                 <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i> Satipo Rio Negro</p>
                 <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+51 983 929 015</p>
                 <p class="mb-2"><i class="fa fa-envelope me-3"></i>henry.management@thekingmoss.com</p>
             </div>
             <div class="col-lg-6 col-md-6">
-		  <h4 class="text-white mb-4">Quick Links</h4>
-		  <a class="btn btn-link" href="about.php">About Us</a>
-		  <a class="btn btn-link" href="contact.php">Contact Us</a>
-		  <a class="btn btn-link" href="services.php">Our Services</a>
-		  <a class="btn btn-link" href="contact.php">Support</a>
+		  <h4 class="text-white mb-4">Enlaces Rapidos</h4>
+		  <a class="btn btn-link" href="about.php">Sobre Nosotros</a>
+		  <a class="btn btn-link" href="contact.php">Contacto</a>
+		  <a class="btn btn-link" href="prodcts.php">Productos</a>
 	 </div>
 </div>
 </div>

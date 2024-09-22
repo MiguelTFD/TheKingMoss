@@ -15,18 +15,18 @@
 <div class="container-fluid page-header page-products py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
     <div class="container text-center py-5">
         <h1 class="display-3 text-white mb-4 animated slideInDown">
-            Products
+           Productos 
         </h1>
         <nav aria-label="breadcrumb animated slideInDown">
             <ol class="breadcrumb justify-content-center mb-0"> 
                 <li class="breadcrumb-item">
-                   <a href="#">Home</a>
+                   <a href="#">Inicio</a>
                 </li> 
                 <li class="breadcrumb-item">
-                   <a href="#">Pages</a>
+                   <a href="#">Páginas</a>
                 </li>
                 <li class="breadcrumb-item active" aria-current="page">
-                   Products 
+                  Productos 
                 </li> 
             </ol>
         </nav>
@@ -38,20 +38,20 @@
 <div class="container-xxl py-5"> 
     <div class="container">
         <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-            <p class="fs-5 fw-bold text-primary">Our Products</p>
-            <h1 class="display-5 mb-5">Some of our amazing products</h1> 
+            <p class="fs-5 fw-bold text-primary">Nuestros Productos</p>
+            <h1 class="display-5 mb-5">Algunos de nuestros excelentes productos</h1> 
         </div> 
         <div class="row wow fadeInUp" data-wow-delay="0.3s"> 
             <div class="col-12 text-center">
                 <ul class="list-inline rounded mb-5" id="portfolio-flters"> 
                     <li class="mx-2 active" data-filter="*">
-                        All
+                       Todos 
                     </li> 
                     <li class="mx-2" data-filter=".first">
-                        Dry Moss
+                       Musgo Deshidratado 
                     </li> 
                     <li class="mx-2" data-filter=".second">
-                        Live Moss
+                       Musgo Vivo 
                     </li> 
                 </ul> 
             </div>

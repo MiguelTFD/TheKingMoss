@@ -54,14 +54,14 @@ border-radius:15px;
          <div class="p-3 ">
          <h2> <?= htmlspecialchars($producto->nombre);?></h2>
          <p style="color:#C4B400">
-            Products/<?= htmlspecialchars($producto->tipo)?>.
+            Productos/<?= htmlspecialchars($producto->tipo)?>.
          </p>
             <div class="d-flex align-items-center gap-3 m-1">
                <h5 style="color:gray;text-decoration: line-through;">
                   S/<?=htmlspecialchars($producto->precio)?>
                </h5>
                <h3 style="color:#7B311E;">
-                  S/<?=htmlspecialchars($producto->descuento(50))?>
+                  S/<?=htmlspecialchars($producto->descuento())?>
                </h3> 
             </div> 
          </div>

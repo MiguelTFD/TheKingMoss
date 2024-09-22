@@ -4,12 +4,12 @@
 <!-- Page Header Start -->
 <div class="container-fluid page-header page-contact py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
     <div class="container text-center py-5">
-        <h1 class="display-3 text-white mb-4 animated slideInDown">Contact Us</h1>
+        <h1 class="display-3 text-white mb-4 animated slideInDown">Contacto</h1>
         <nav aria-label="breadcrumb animated slideInDown">
             <ol class="breadcrumb justify-content-center mb-0">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Contact</li>
+                <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+                <li class="breadcrumb-item"><a href="#">Páginas</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Contacto</li>
             </ol>
         </nav>
     </div>
@@ -22,32 +22,32 @@
     <div class="container">
         <div class="row g-5">
             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                <p class="fs-5 fw-bold text-primary">Contact Us</p>
-                <h1 class="display-5 mb-5">If You Have Any Query, Please Contact Us</h1>
+                <p class="fs-5 fw-bold text-primary">Contactanos!</p>
+                <h1 class="display-5 mb-5">Si tienes alguna duda o consulta, Contactanos por favor</h1>
                 <form id="contactForm">
                     <div class="row g-3">
                         <div class="col-12">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="name" name="name" placeholder="Your Name">
-                                <label for="name">Your Name</label>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Ingresa tu nombre">
+                                <label for="name">Nombre</label>
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
-                                <label for="subject">Subject</label>
+                                <input type="text" class="form-control" id="subject" name="subject" placeholder="Ingresa el asunto de tu consulta">
+                                <label for="subject">Asunto</label>
                             </div>
                         </div>
 
                         <div class="col-12">
                             <div class="form-floating">
-                                <textarea class="form-control" placeholder="Leave a message here" id="message" name="message" style="height: 100px"></textarea>
-                                <label for="message">Message</label>
+                                <textarea class="form-control" placeholder="Ingresa aqui tu duda o consulta..." id="message" name="message" style="height: 100px"></textarea>
+                                <label for="message">Mensaje</label>
                             </div>
                         </div>
 
                         <div class="col-12">
-                            <button id="sendEmailButton" class="btn btn-primary py-3 px-4" type="button">Send Message</button>
+                            <button id="sendEmailButton" class="btn btn-primary py-3 px-4" type="button">Enviar Mensaje</button>
 </form>
                         </div>
                     </div>

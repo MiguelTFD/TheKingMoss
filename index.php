@@ -112,9 +112,9 @@
                 <p class="text-primary mb-4">Siendo los proveedores a nivel nacional</p>
                 <h1 class="display-5 mb-4">De los andes a tu puerta</h1>
                 <p class="mb-4">
-                    To ensure minimal environmental impact and 
-                    natural regrowth, we sustainably hand-pick 
-                    the finest moss from the Peruvian Andes.
+                    Para asegurarnos de un impacto positivo al medio ambiente
+                    Cosechamos el musgo mas fino de los andes peruanos
+                    a mano y de forma sostenible.
                 </p>
             </div>
             <div class="col-lg-3 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
@@ -122,15 +122,15 @@
                     <div class="col-12 col-sm-6 col-lg-12">
                         <div class="border-start ps-4">
                             <i class="fa fa-leaf fa-3x text-primary mb-3"></i>
-                            <h4 class="mb-3">Eco-Friendly Practices</h4>
-                            <span>Embracing Eco-Friendly Practices, we make sure our work is kind to the planet.</span>
+                            <h4 class="mb-3">Practicas Eco-Amigables</h4>
+                            <span>Nos Aseguramos que nuestras practicas respeten al medio ambiente</span>
                         </div>
                     </div>
                     <div class="col-12 col-sm-6 col-lg-12">
                         <div class="border-start ps-4">
                             <i class="fa fa-users fa-3x text-primary mb-3"></i>
-                            <h4 class="mb-3">Dedicated Team</h4>
-                            <span>We have a competent, committed and professional team.</span>
+                            <h4 class="mb-3">Equipo Capacitado</h4>
+                            <span>Contamos con un equipo plenamente capacitado y comprometido a resolver tus dudas</span>
                         </div>
                     </div>
                 </div>
@@ -146,14 +146,14 @@
     <div class="container py-5">
         <div class="row g-5">
             <div class="col-sm-6 col-lg-6 text-center wow fadeIn" data-wow-delay="0.1s">
-                <h1 class="display-4 text-white">More than</h1>
+                <h1 class="display-4 text-white">Mas de</h1>
                 <h1 class="display-4 text-white" data-toggle="counter-up">1000</h1>
-                <span class="fs-5 fw-semi-bold text-light">Happy Clients</span>
+                <span class="fs-5 fw-semi-bold text-light">Clientes Satisfechos</span>
             </div>
             <div class="col-sm-6 col-lg-6 text-center wow fadeIn" data-wow-delay="0.3s">
-                <h1 class="display-4 text-white">Coverage of all</h1>
+                <h1 class="display-4 text-white">Cobertura de los</h1>
                 <h1 class="display-4 text-white" data-toggle="counter-up">24</h1>
-                <span class="fs-5 fw-semi-bold text-light">Departments across the country</span>
+                <span class="fs-5 fw-semi-bold text-light">Departamentos del pais</span>
             </div>
         </div>
     </div>
@@ -165,14 +165,15 @@
     <div class="container">
         <div class="row g-5 align-items-center">
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                <p class="fs-5 fw-bold text-primary">Why Choosing Us!</p>
-                <h1 class="display-5 mb-4">Some reasons why people choose us!</h1>
+                <p class="fs-5 fw-bold text-primary">La Mejor Eleccion!</p>
+                <h1 class="display-5 mb-4">Razones por las cual elegirnos!</h1>
                 <p class="mb-4">
-                    At The King Moss, our mission is to deliver not only
-                    the highest quality moss but also to ensure our practices support
-                    the environment and local communities. We are dedicated to sharing
-                    the unique beauty of the Peruvian Andes with the world while maintaining
-                    a commitment to sustainability and excellence.
+                    En The King Moss, nuestra misión es ofrecer 
+                    no solo musgo de la más alta calidad, sino también garantizar 
+                    que nuestras prácticas apoyen el medio ambiente y 
+                    las comunidades locales. Nos dedicamos a compartir 
+                    la belleza única de los Andes peruanos con el mundo, 
+                    manteniendo un compromiso con la sostenibilidad y la excelencia.
                 </p>
             </div>
             <div class="col-lg-6">
@@ -184,7 +185,7 @@
                                     <div class="btn-square bg-light rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
                                         <i class="fa fa-check fa-3x text-primary"></i>
                                     </div>
-                                    <h4 class="mb-0">100% Satisfaction</h4>
+                                    <h4 class="mb-0">100% Satisfaccion</h4>
                                 </div>
                             </div>
                             <div class="col-12 wow fadeIn" data-wow-delay="0.5s">
@@ -192,7 +193,7 @@
                                     <div class="btn-square bg-light rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
                                         <i class="fa fa-users fa-3x text-primary"></i>
                                     </div>
-                                    <h4 class="mb-0">Dedicated Team</h4>
+                                    <h4 class="mb-0">Equipo Capacitado</h4>
                                 </div>
                             </div>
                         </div>
@@ -202,7 +203,7 @@
                             <div class="btn-square bg-light rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
                                 <i class="fa fa-tools fa-3x text-primary"></i>
                             </div>
-                            <h4 class="mb-0">Modern Equipment</h4>
+                            <h4 class="mb-0">Infraestructura Moderna</h4>
                         </div>
                     </div>
                 </div>
@@ -219,8 +220,8 @@
 <div class="container-xxl py-5" id="servicesTp">
     <div class="container">
         <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-            <p class="fs-5 fw-bold text-primary">Our Services</p>
-            <h1 class="display-5 mb-5">Services That We Offer For You</h1>
+            <p class="fs-5 fw-bold text-primary">Nuestros Servicios</p>
+            <h1 class="display-5 mb-5">Servicios que tenemos para ti</h1>
         </div>
         <div class="row g-4">
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -232,8 +233,11 @@
                         <div class="btn-square rounded-circle mx-auto mb-3">
                             <img class="img-fluid" src="img/icon/icon-3.png" alt="Icon" loading="lazy" >
                         </div>
-                        <h4 class="mb-3">Personalized Moss Consultation</h4>
-                        <p class="mb-4">Expert advice to help you choose the best moss for your needs.</p>
+                        <h4 class="mb-3">Atencion Personalizada</h4>
+                        <p class="mb-4">
+                            Contamos con expertos que te atenderan en 
+                            base a tus necesidades
+                        </p>
                     </div>
                 </div>
             </div>
@@ -246,36 +250,65 @@
                         <div class="btn-square rounded-circle mx-auto mb-3">
                             <img class="img-fluid" src="img/icon/icon-6.png" alt="Icon" loading="lazy" >
                         </div>
-                        <h4 class="mb-3">Nationwide Shipping</h4>
-                        <p class="mb-4">Reliable delivery across the country, ensuring your moss arrives fresh and in perfect condition.</p>
+                        <h4 class="mb-3">Envios a nivel nacional</h4>
+                        <p class="mb-4">
+                            Hacemos envios de manera segura y confiable 
+                            a cualquier parte del Pais
+                        </p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="service-item rounded d-flex h-100">
                     <div class="service-img rounded">
-                        <img class="img-fluid" src="img/international.webp" alt="" loading="lazy" >
+                        <img 
+                            class="img-fluid" 
+                            src="img/international.webp" 
+                            alt="" loading="lazy" 
+                        >
                     </div>
                     <div class="service-text rounded p-5">
                         <div class="btn-square rounded-circle mx-auto mb-3">
-                            <img class="img-fluid" src="img/icon/icon-5.png" alt="Icon" loading="lazy" >
+                            <img 
+                                class="img-fluid" 
+                                src="img/icon/icon-5.png" 
+                                alt="Icon" 
+                                loading="lazy" 
+                            >
                         </div>
-                        <h4 class="mb-3">International Export Services</h4>
-                        <p class="mb-4">Efficient and secure shipping for international customers.</p>
+                        <h4 class="mb-3">Exportacion a nivel internacional</h4>
+                        <p class="mb-4">
+                            Nos aseguramos de cumplir con las normas 
+                            de seguridad y calidad, para que el producto
+                            llegue en las mejores condiciones.
+                        </p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="service-item rounded d-flex h-100">
                     <div class="service-img rounded">
-                        <img class="img-fluid" src="img/decoration.png" alt="" loading="lazy" >
+                        <img 
+                            class="img-fluid" 
+                            src="img/decoration.png" 
+                            alt="" 
+                            loading="lazy" 
+                        >
                     </div>
                     <div class="service-text rounded p-5">
                         <div class="btn-square rounded-circle mx-auto mb-3">
-                            <img class="img-fluid" src="img/icon/icon-4.png" alt="Icon" loading="lazy" >
+                            <img 
+                                class="img-fluid" 
+                                src="img/icon/icon-4.png" 
+                                alt="Icon" 
+                                loading="lazy" 
+                            >
                         </div>
-                        <h4 class="mb-3">Custom Moss Arrangements </h4>
-                        <p class="mb-4">Tailored moss designs for unique decorative needs.</p>
+                        <h4 class="mb-3">Acompañamiento de principio a fin</h4>
+                        <p class="mb-4">
+                           Te ayudamos de principio a fin para tu proceso
+                           de seleccion y compra. 
+                        </p>
                     </div>
                 </div>
             </div>
@@ -288,8 +321,13 @@
                         <div class="btn-square rounded-circle mx-auto mb-3">
                             <img class="img-fluid" src="img/icon/icon-8.png" alt="Icon" loading="lazy" >
                         </div>
-                        <h4 class="mb-3">Moss Care and Maintenance Guidance</h4>
-                        <p class="mb-4">Tips and instructions to keep your moss looking its best.</p>
+                        <h4 class="mb-3">
+                            Guia y cuidado para el  mantenimiento del musgo 
+                        </h4>
+                        <p class="mb-4">
+                            Tips y guias de cuidado para asegurarnos de 
+                            que tu musgo permanezca en las mejores 
+                            condiciones.
                     </div>
                 </div>
             </div>
@@ -302,8 +340,11 @@
                         <div class="btn-square rounded-circle mx-auto mb-3">
                             <img class="img-fluid" src="img/icon/icon-2.png" alt="Icon" loading="lazy" >
                         </div>
-                        <h4 class="mb-3">Exclusive Moss Varieties</h4>
-                        <p class="mb-4">Access to rare and unique moss species that aren’t available elsewhere.</p>
+                        <h4 class="mb-3">Variedad de Sutratos</h4>
+                        <p class="mb-4">
+                            Contamos con gran variedad de sustratos 
+                            de la mejor calidad.
+                        </p>
                     </div>
                 </div>
             </div>

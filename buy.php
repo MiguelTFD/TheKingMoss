@@ -44,7 +44,7 @@ if(isset($_POST['cantidad'])){
    echo "Cantidad no valida";
 }
 
-$preTot = $can * $producto->descuento(50);
+$preTot = $can * $producto->descuento();
 ?>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 
