@@ -46,6 +46,14 @@ if(isset($_POST['cantidad'])){
 
 $preTot = $can * $producto->descuento();
 ?>
+<style>
+.material-symbols-outlined {
+  font-size: 40px !important;
+}
+</style>
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -105,6 +113,21 @@ border-radius:15px;
 background: #929302;
 
 }
+
+#fn-opt-buy{
+    display:inline-flex;
+}
+
+
+.pay-ct-op{
+display:grid;
+justify-items: center;
+text-align:center;
+}
+.pay-ct-op small::before{
+content:url(img/icon/info.svg);
+}
+
 </style>
 
 <div style="margin:10px 0px" 
@@ -154,15 +177,24 @@ text-align: center;width:fit-content;padding:20px 0" id="timer">
             </label>
             <label>
                 <input type="radio" name="payment" value="BCP" required> 
-                <img class="imgPayment" src="img/bcp-logo.png">
+                <div class="pay-ct-op">
+                    <img class="imgPayment" src="img/bcp-logo.png">
+                    <small>Solo transferencia digital</small>
+                </div>
             </label>
             <label>
                 <input type="radio" name="payment" value="BBVA" required> 
-                <img class="imgPayment" src="img/bbva-logo.png">
+                <div class="pay-ct-op">
+                    <img class="imgPayment" src="img/bbva-logo.png">
+                    <small>Solo transferencia digital</small>
+                </div>
             </label>
             <label>
                 <input type="radio" name="payment" value="BancoDeLaNacion" required> 
-                <img class="imgPayment" src="img/bn-logo.png">
+                <div class="pay-ct-op">
+                    <img class="imgPayment" src="img/bn-logo.png">
+                    <small>Para deposito en agente</small>
+                </div>
             </label>
          </div>
          <div class="step-buttons">
@@ -474,7 +506,7 @@ function submitOrder() {
           <main class="ticket-system">
              <div class="top">
              <h1 class="title">
-                Envia este ticket junto con la constancia de tu pago.
+                Envia este ticket a nuestro whatsapp junto con la constancia de tu pago.
              </h1>
              <div class="printer" />
              </div>
@@ -545,7 +577,13 @@ function submitOrder() {
                    </div>
                 </div>
              </div>
+            <div id="fn-opt-buy">
             <a id="download">Descargar Ticket</a>
+            <a style="color:inherit;background:#929302;padding:10px" href="https://api.whatsapp.com/send?phone=51983929015" target="_blank">
+                <span ><img src="img/icon/phone-left.svg" src="phoneleft"></span>
+                <span>Enviar ticket por whatsapp</span>
+            </a>
+            </div>
           </main>
        `;
         console.log(document.getElementById('inputOtherAgencia').value)
@@ -658,6 +696,8 @@ function validateAndNextStep(event) {
       }
       return false;
    }
+    
+
 
     //Descargar Ticket
     function holis(){    

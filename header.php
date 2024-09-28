@@ -9,16 +9,6 @@
     <meta content="" name="keywords">
     <meta content="" name="description">
     
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
-    
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     
     <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
@@ -32,6 +22,31 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/ticket.css" rel="stylesheet">
 </head>
+<?php
+session_start();
+include 'entity/Drymoss.php';
+include_once 'entity/Livemoss.php';
+
+
+if (isset($_SESSION['productos'])) {
+    $productos = $_SESSION['productos'];
+} else {
+   echo "No hay productos disponibles.";
+   $productos = [];
+  exit; 
+}
+if (isset($_SESSION['livemoss'])) {
+    $livemoss= $_SESSION['livemoss'];
+} else {
+   echo "No hay productos disponibles.";
+   $livemoss= [];
+  exit; 
+}
+?>
+
+
+
+
 
 <body>
 <!-- Spinner Start -->
@@ -42,17 +57,17 @@
 <!-- Spinner End -->
 
 <!-- Topbar Start -->
-<div class="container-fluid bg-dark text-light px-0 py-2">
+<div style="z-index: 123;position: relative;" class="container-fluid bg-dark text-light px-0 py-2">
     <div id="theader" class="row gx-0 d-none d-lg-flex">
         <div id="f-contact" class="col-lg-7 px-5 text-start">
             <div class="h-100 d-inline-flex align-items-center me-4">
                 <a style="color:inherit" href="https://api.whatsapp.com/send?phone=51983929015" target="_blank">
-                    <span class="fa fa-phone-alt me-2"></span>
+                    <span ><img src="img/icon/phone-left.svg" src="phoneleft"></span>
                     <span>+51 983 929 015</span>
                 </a>
             </div>
             <div class="h-100 d-inline-flex align-items-center">
-                <span class="far fa-envelope me-2"></span>
+                <span><img src="img/icon/mail16x18.svg" alt="email"></span>
                 <span>henry.management@thekingmoss.com</span>
             </div>
         </div>
@@ -75,7 +90,7 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
-        <div class="navbar-nav ms-auto p-4 p-lg-0">
+        <div style="align-items: center;" class="navbar-nav ms-auto p-4 p-lg-0">
             <a href="index.php" class="nav-item nav-link">Inicio</a>
             <a href="about.php" class="nav-item nav-link">Sobre Nosotros</a>
             <a href="store.php" class="nav-item nav-link">Tienda</a>
@@ -144,14 +159,113 @@
                 </span> 
             </button>
         </div>
+        </div>
+    </div>
+
+    <div class="wsp-1-2">
+        <button class="btn-base-wsp-contact dfn-wsp">
+        <img class="wsp-1-2_wsp-logo" src="img/wsp_light_logo.png"/>
+        </button>
     </div>
 </div>
 
-<div class="wsp-1-2">
-    <button class="btn-base-wsp-contact dfn-wsp">
-        <img class="wsp-1-2_wsp-logo" src="img/wsp_light_logo.png"/>
-    </button>
+
+<button type="button" class="btn " id="btn-carrito"><img src="img/icon/shopping.svg" alt="carrito"></button>
+
+<!--Cart Sidebar-->
+<div class="sidebar" id="id_sidebar">
+    <div id="sideClose" class="sidebar-close">
+        <span>x</span>
+    </div>
+    <div class="cart-menu">
+        <h3>Mi Carrito</h3>
+        <div class="cart-items">test 1</div>
+    </div>
+    <div class="sidebar-footer">
+        <div class="total-amount">
+            <h5>Total</h5>
+            <div class="cart-total">S/0.00</div>
+        </div>
+        <button class="btn btn-primary gopay-btn">Comprar</button>
+    </div>
 </div>
-</div>
+<style>
+.sidebar{
+    background:white;
+    width:300px;
+    height:100%;
+    position:fixed;
+    top:0;
+    right: -300px; 
+    /*right:0;*/
+    box-shadow: -4px 0 6px rgba(0,0,0,0.1);
+    transition: right 0.3s ease-in-out;
+    z-index:100000000;
+    padding: 20px;
+    border-top-left-radius:20px;
+    border-bottom-left-radius:20px;
+}   
+.sidebar-open{
+    right:0;
+} 
+.sidebar-close{
+    position:absolute;
+    right:20px;
+    top:10px;
+    cursor:pointer;
+}
+.cart-items{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    margin-top:1rem;
+    justify-content: space-between;
+    padding:10px 5px;
+    border-radius:5px;
+    border:1px solid grey;
+}
+.sidebar-footer{
+    position:absolute;
+    bottom:10px;
+    width:88%;
+}
+.total-amount{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    border: 2px solid grey;
+    border-radius:5px;
+    padding:15px;
+}
+.cart-total{
+    font-size:16px;
+    font-weight:500;
+}
+.gopay-btn{
+    width:100%;
+    margin-top:2rem;
+}
+</style>
+<script>
+
+function toggleSectionCart(){
+    const btnExpandBuy = document.getElementById('btn-carrito');
+    let sidebarExpand = document.getElementById("id_sidebar");
+    const closeBtn = document.getElementById("sideClose");
+    btnExpandBuy.addEventListener("click",()=>{
+        sidebarExpand.classList.add("sidebar-open") 
+    }) 
+    
+    closeBtn.addEventListener("click",()=>{
+        sidebarExpand.classList.remove("sidebar-open") 
+    })
+}
+function addItemToCart(){
+
+}
 
 
+document.addEventListener('DOMContentLoaded',()=>{
+    toggleSectionCart();
+})
+</script>

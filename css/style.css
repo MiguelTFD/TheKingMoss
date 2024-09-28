@@ -11,14 +11,19 @@
 
 }
 
+@font-face {
+  font-family: 'Open Sans'; 
+  src: url('../fonts/OpenSans-Regular.ttf'); 
+}
+
 *{
-		  font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", sans-serif;
 }
 
 .back-to-top {
     position: fixed;
     display: none;
-    right: 30px;
+    right: 45%;
     bottom: 30px;
     z-index: 99;
 }
@@ -513,13 +518,6 @@ h6,
     transition: .3s;
 }
 
-.footer .btn.btn-link::before {
-    position: relative;
-    content: "\f105";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    margin-right: 10px;
-}
 
 .footer .btn.btn-link:hover {
     color: var(--primary);
@@ -610,7 +608,7 @@ h6,
 	position: fixed;
 	z-index:99999999;
 	margin:20px;
-	inset:auto auto 0px 0px;
+    bottom:17px;
 }
 .btn-base-wsp-contact{
 	max-width:901px;
@@ -1001,3 +999,19 @@ font-size:1.6rem !important;
 
 }
 
+.m-icon{
+    width:48px;
+}
+.s-icon{
+    width: 15px;
+}
+#btn-carrito{
+    z-index:1294392;
+    position:fixed;
+    right: 8px;
+    bottom: 25px;
+    width:65px;
+    height:65px;
+    border-radius:15px;
+    background:#2D2D2E;
+}

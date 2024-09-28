@@ -1,24 +1,5 @@
 <?php
-session_start();
 include 'header.php'; 
-include 'entity/Drymoss.php';
-include_once 'entity/Livemoss.php';
-
-
-if (isset($_SESSION['productos'])) {
-    $productos = $_SESSION['productos'];
-} else {
-   echo "No hay productos disponibles.";
-   $productos = [];
-  exit; 
-}
-if (isset($_SESSION['livemoss'])) {
-    $livemoss= $_SESSION['livemoss'];
-} else {
-   echo "No hay productos disponibles.";
-   $livemoss= [];
-  exit; 
-}
 ?>
 
 
@@ -96,9 +77,11 @@ filter: saturate(0.8);
 <!-- Store Start-->
 
 <div style="display:flex;align-items: center;justify-content: center;">
-   <span style="color:#929302;font-size:40px" class="material-symbols-outlined">
-      storefront
-   </span>
+<img
+    class="m-icon"
+    src="img/icon/storefront_24dp_929302_FILL0_wght400_GRAD0_opsz24.svg" 
+    alt="storefront"
+>
 <h1 style="width: fit-content;margin:0">Tienda</h1>
 </div>
 <!-- Dry Moss Sizes -->
@@ -129,9 +112,13 @@ filter: saturate(0.8);
             <div class="dv-btn-ps">
                 <form action="details.php" method="post">
                     <input type="hidden" name="id" value="<?= $producto->id; ?>">
-                    <button type="submit" class="btn btn-primary btn-ps-cp">
+                    <button type="submit" class="btn btn-secondary btn-ps-cp">
                         Ver más
                     </button>
+                    <button type="submit" class="btn btn-primary btn-ps-cp">
+                        Agregar al carrito 
+                    </button>
+
                 </form>
             </div>
         </div>

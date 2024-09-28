@@ -9,7 +9,7 @@
         position: relative;
     }
 </style>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 
 <!-- Page Header Start --> 
 <div class="container-fluid page-header page-products py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">

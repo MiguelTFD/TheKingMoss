@@ -59,7 +59,7 @@
                 <div class="bg-white shadow d-flex align-items-center h-100 px-5" style="min-height: 160px;">
                     <div class="d-flex">
                         <div class="flex-shrink-0 btn-lg-square rounded-circle bg-light">
-                            <i class="fa fa-dollar-sign text-primary"></i>
+                            <img src="img/icon/attach_money_16dp_929302_FILL0_wght400_GRAD0_opsz20.svg" alt="money">
                         </div>
                         <div class="ps-3">
                             <h4>Precios Competitivos</h4>
@@ -72,11 +72,11 @@
                 <div class="bg-white shadow d-flex align-items-center h-100 px-5" style="min-height: 160px;">
                     <div class="d-flex">
                         <div class="flex-shrink-0 btn-lg-square rounded-circle bg-light">
-                            <i class="fa fa-users text-primary"></i>
+                            <img src="img/icon/groups_24dp_929302_FILL0_wght400_GRAD0_opsz24.svg" src="teams">
                         </div>
                         <div class="ps-3">
                             <h4>Equipo Comprometido</h4>
-                            <span>Contamos con un equipo dedicado, profesional y comprometido con nuestros clientes</span>
+                            <span>Contamos con un equipo dedicado y profesional</span>
                         </div>
                     </div>
                 </div>
@@ -85,7 +85,7 @@
                 <div class="bg-white shadow d-flex align-items-center h-100 px-5" style="min-height: 160px;">
                     <div class="d-flex">
                         <div class="flex-shrink-0 btn-lg-square rounded-circle bg-light">
-                            <i class="fa fa-phone text-primary"></i>
+                            <img src="img/icon/call_16dp_929302_FILL0_wght400_GRAD0_opsz20.svg" alt="phone">
                         </div>
                         <div class="ps-3">
                             <h4>Atencion al cliente 24/7</h4>
@@ -121,14 +121,14 @@
                 <div class="row g-5">
                     <div class="col-12 col-sm-6 col-lg-12">
                         <div class="border-start ps-4">
-                            <i class="fa fa-leaf fa-3x text-primary mb-3"></i>
+                            <img src="img/icon/eco_48dp_929302_FILL0_wght400_GRAD0_opsz48.svg" alt="Leaf">
                             <h4 class="mb-3">Practicas Eco-Amigables</h4>
                             <span>Nos Aseguramos que nuestras practicas respeten al medio ambiente</span>
                         </div>
                     </div>
                     <div class="col-12 col-sm-6 col-lg-12">
                         <div class="border-start ps-4">
-                            <i class="fa fa-users fa-3x text-primary mb-3"></i>
+                            <img src="img/icon/diversity_3_48dp_929302_FILL0_wght400_GRAD0_opsz48.svg" alt="people">
                             <h4 class="mb-3">Equipo Capacitado</h4>
                             <span>Contamos con un equipo plenamente capacitado y comprometido a resolver tus dudas</span>
                         </div>
@@ -183,7 +183,7 @@
                             <div class="col-12 wow fadeIn" data-wow-delay="0.3s">
                                 <div class="text-center rounded py-5 px-4" style="box-shadow: 0 0 45px rgba(0,0,0,.08);">
                                     <div class="btn-square bg-light rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
-                                        <i class="fa fa-check fa-3x text-primary"></i>
+                                        <img class="m-icon" src="img/icon/check_48dp_929302_FILL0_wght400_GRAD0_opsz48.svg" src="check">
                                     </div>
                                     <h4 class="mb-0">100% Satisfaccion</h4>
                                 </div>
@@ -191,7 +191,7 @@
                             <div class="col-12 wow fadeIn" data-wow-delay="0.5s">
                                 <div class="text-center rounded py-5 px-4" style="box-shadow: 0 0 45px rgba(0,0,0,.08);">
                                     <div class="btn-square bg-light rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
-                                        <i class="fa fa-users fa-3x text-primary"></i>
+                                        <img class="m-icon" src="img/icon/groups_24dp_929302_FILL0_wght400_GRAD0_opsz24.svg" src="teams">
                                     </div>
                                     <h4 class="mb-0">Equipo Capacitado</h4>
                                 </div>
@@ -201,7 +201,7 @@
                     <div class="col-md-6 wow fadeIn" data-wow-delay="0.7s">
                         <div class="text-center rounded py-5 px-4" style="box-shadow: 0 0 45px rgba(0,0,0,.08);">
                             <div class="btn-square bg-light rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
-                                <i class="fa fa-tools fa-3x text-primary"></i>
+                                <img class="m-icon" src="img/icon/handyman_48dp_929302_FILL0_wght400_GRAD0_opsz48.svg" src="tools">
                             </div>
                             <h4 class="mb-0">Infraestructura Moderna</h4>
                         </div>

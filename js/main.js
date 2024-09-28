@@ -46,7 +46,7 @@
         time: 2000
     });
 
-    // Testimonials carousel
+    
     $(".testimonial-carousel").owlCarousel({
         autoplay: true,
         smartSpeed: 1000,
@@ -74,7 +74,7 @@ function sendMessage()
 }
   document.querySelector('.btn-base-wsp-contact').addEventListener('click', function() {
             var wspContainer = document.querySelector('.wsp-1-1');
-            wspContainer.classList.toggle('show'); // Alternar la clase 'show'
+            wspContainer.classList.toggle('show'); 
   });
 
 /*------------*/
@@ -171,7 +171,6 @@ $(window).on('load', function() {
         portfolioIsotope.isotope({ filter: $(this).data('filter') });
     });
 });
-
 
 
 autoPlay();
