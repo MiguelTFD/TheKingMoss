@@ -4,6 +4,9 @@
     .portfolio-item{
         position: inherit;
     }
+    .m-icon{
+        width:48px;
+    }
 </style>
 
 <!-- Carousel Start -->

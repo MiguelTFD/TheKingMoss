@@ -91,11 +91,11 @@ if (isset($_SESSION['livemoss'])) {
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div style="align-items: center;" class="navbar-nav ms-auto p-4 p-lg-0">
-            <a href="index.php" class="nav-item nav-link">Inicio</a>
             <a href="about.php" class="nav-item nav-link">Sobre Nosotros</a>
             <a href="store.php" class="nav-item nav-link">Tienda</a>
             <a href="products.php" class="nav-item nav-link">Productos</a>
             <a href="contact.php" class="nav-item nav-link">Contacto</a>
+            <a class="sign nav-item nav-link">Iniciar Sesion</a>
         </div>
     </div>
 </nav>
